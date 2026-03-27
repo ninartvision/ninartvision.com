@@ -1,9 +1,4 @@
 User-agent: *
-Allow: /
-
-Disallow: /js/
-Disallow: /css/
-Disallow: /fonts/
 Disallow: /analytics.html
 Disallow: /advanced-website.html
 

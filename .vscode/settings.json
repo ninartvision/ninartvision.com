@@ -1,3 +1,9 @@
 {
-    "liveServer.settings.port": 5502
+    "liveServer.settings.port": 5502,
+    "chat.tools.terminal.autoApprove": {
+        "/^Get-Item \"n:\\\\site\\\\ninartvision\\.com\\\\js\\\\particles\\.min\\.js\" \\| Select-Object Name, @\\{n='KB';e=\\{\\[math\\]::Round\\(\\$_\\.Length/1KB,1\\)\\}\\}$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
 }

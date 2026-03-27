@@ -1,20 +1,4 @@
-/* Custom BPG font - load from local fonts folder */
-@font-face {
-  font-family: 'bpg';
-  src: url('../fonts/bpg.woff2') format('woff2'),
-       url('../fonts/bpg.woff') format('woff'),
-       url('../fonts/bpg.ttf') format('truetype'),
-       url('../fonts/bpg.eot') format('embedded-opentype'),
-       url('../fonts/bpg.svg#bpg') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Apply BPG font globally */
-body, h1, h2, h3, h4, h5, h6, button, input, textarea, select, a, p, li, ul, ol, span, div {
-  font-family: 'bpg', Arial, sans-serif;
-}
+/* BPG font */
 @font-face {
   font-family: "BPG";
   src: url('../fonts/bpg.woff2') format('woff2'),
@@ -22,6 +6,11 @@ body, h1, h2, h3, h4, h5, h6, button, input, textarea, select, a, p, li, ul, ol,
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+}
+
+/* Apply BPG font globally */
+body, h1, h2, h3, h4, h5, h6, button, input, textarea, select, a, p, li, ul, ol, span, div {
+  font-family: "BPG", Arial, sans-serif;
 }
 
 
@@ -282,8 +271,7 @@ header > nav {
 /* ========== HAMBURGER ========== */
 /* Merge .hamburger rules */
 .hamburger {
-  display: none; /* shown via media query */
-  width: 32px; /* overall icon width */
+  width: 32px;
   padding: 6px 4px;
   background: transparent;
   border: 0;
