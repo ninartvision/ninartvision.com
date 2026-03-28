@@ -33,6 +33,13 @@ body {
   background: #000;
   color: #fff;
   overflow: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }
 
 /* ========== BRAND TOKENS ========== */
@@ -62,12 +69,16 @@ header {
 /* If page contains .about-content, center that block in the viewport while
    keeping the inner frame shrink-to-fit. Uses modern :has() to scope safely. */
 body:has(.about-content) {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding-top: var(--header-height);
   box-sizing: border-box;
+}
+
+/* Center about page content within main, not body */
+body:has(.about-content) > main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Ensure the about frame itself remains shrink-to-fit and centered */
@@ -855,80 +866,41 @@ footer {
 }
 
 
-#background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-.about-content {
-  /* frame should wrap content only */
-  height: auto; /* do not force full viewport height */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-.about-intro {
-  margin-bottom: 20px;
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-.about-list {
-  text-align: left;
-  margin: 20px auto;
-  padding-left: 20px;
-  max-width: 500px;
-}
-
-.about-list li {
-  margin-bottom: 10px;
-  font-size: 17px;
-  opacity: 1;
-}
-
-.about-end {
-  margin-top: 20px;
-  font-size: 17px;
-  line-height: 1.6;
-  opacity: 0.9;
-}
 /* ================= ABOUT PAGE ================= */
 
-html, body {
-  height: 100%;
-}
-
-
-
 #background {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100vw;
   height: 100vh;
   z-index: -1;
+  pointer-events: none;
+  opacity: 1;
+}
+
+#background > canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  opacity: 0.95;
 }
 
 .about-content {
-  /* Visual frame that wraps the content. Keep it compact and centered. */
   max-width: 700px;
   padding: 20px;
   margin: 0 auto;
-  z-index: 1;
   position: relative;
+  z-index: 1;
   background: rgba(0,0,0,0.18);
   border-radius: 18px;
   box-shadow: 0 4px 32px rgba(0,0,0,0.18);
   text-align: center;
+}
+
+.about-intro {
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 .about-list {
@@ -940,40 +912,14 @@ html, body {
 
 .about-list li {
   margin-bottom: 10px;
+  font-size: 17px;
 }
 
-/* === Fixes: ensure page scroll and consistent base font === */
-html, body {
-  height: auto; /* allow natural height */
-}
-
-body {
-  overflow: auto !important; /* re-enable scrolling (was hidden in duplicate rules) */
-  font-family: "BPG Nateli", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-}
-
-/* === About page cloud background: authoritative restore === */
-/* Ensures VANTA.CLOUDS canvas is visible, positioned, and non-interactive */
-#background {
-  position: fixed;
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1; /* sit behind content but above base background */
-  pointer-events: none;
-  opacity: 1;
-}
-
-#background > canvas {
-  width: 100% !important;
-  height: 100% !important;
-  display: block;
-  opacity: 0.95; /* subtle translucency to blend with page */
-}
-
-.about-content {
-  position: relative;
-  z-index: 1; /* ensure content sits above background */
+.about-end {
+  margin-top: 20px;
+  font-size: 17px;
+  line-height: 1.6;
+  opacity: 0.9;
 }
 /* ===== MOBILE MENU STYLE ===== */
 @media (max-width: 991px)
