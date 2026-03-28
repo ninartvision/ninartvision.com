@@ -231,35 +231,17 @@
     font-size: 28px;
   }
 }
-/* HERO */
-.branding-hero {
-  padding: 100px 20px 60px;
-  text-align: center;
-}
-
 .hero-sub {
   margin-top: 10px;
   color: #c9a646;
   letter-spacing: 2px;
 }
 
-/* GRID */
-/* HERO */
-.page-hero {
-  height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  z-index: 1;
-}
-
 /* PROJECTS SECTION */
 .projects-section {
-  padding: 0 20px 120px;
+  padding: 60px 20px 120px;
   position: relative;
   z-index: 2;
-  margin-top: -550px; /* ✔ სწორი, კონტროლირებადი overlap */
 }
 
 /* GRID */
@@ -271,6 +253,7 @@
 
 /* CARD */
 .project-card {
+  position: relative;
   background: linear-gradient(145deg, #111, #0c0c0c);
   backdrop-filter: blur(10px);
   border-radius: 20px;
@@ -345,10 +328,6 @@
 /* =========================
    CARD TOP LINE EFFECT
 ========================= */
-
-.project-card {
-  position: relative; /* ❗ აუცილებელია */
-}
 
 .project-card::before {
   content: "";
