@@ -161,9 +161,10 @@
   border-radius: 20px;
   overflow: hidden;
 
+  background-color: #111;
   background-image: url("../images/covers/site1.png");
   background-size: cover;
-  background-position: top;
+  background-position: center top;
 
   text-decoration: none;
 
@@ -175,7 +176,10 @@
 }
 
 .featured-link--loftline {
+  background-color: #111;
   background-image: url("../images/covers/site2.png");
+  background-size: cover;
+  background-position: center;
 }
 
 /* overlay */
