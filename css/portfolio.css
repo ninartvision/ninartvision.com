@@ -244,24 +244,35 @@
 }
 
 /* GRID */
-.projects-section {
-  padding: 20px 20px 120px;
-  margin-top: -500px; /* grid აიწევს hero-სთან ახლოს */
+/* HERO */
+.page-hero {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  z-index: 3;
+  z-index: 1;
 }
 
+/* PROJECTS SECTION */
+.projects-section {
+  padding: 0 20px 120px;
+  position: relative;
+  z-index: 2;
+  margin-top: -550px; /* ✔ სწორი, კონტროლირებადი overlap */
+}
 
+/* GRID */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
 }
 
+/* CARD */
 .project-card {
   background: linear-gradient(145deg, #111, #0c0c0c);
   backdrop-filter: blur(10px);
-
   border-radius: 20px;
   overflow: hidden;
   text-decoration: none;
@@ -270,6 +281,7 @@
   transition: 0.4s ease;
 }
 
+/* HOVER */
 .project-card:hover {
   transform: translateY(-8px);
   border-color: #c9a646;
@@ -278,6 +290,7 @@
     0 0 20px rgba(201,166,70,0.15);
 }
 
+/* IMAGE */
 .project-image img {
   width: 100%;
   height: 300px;
@@ -289,6 +302,7 @@
   transform: scale(1.05);
 }
 
+/* INFO */
 .project-info {
   padding: 25px;
 }
@@ -316,12 +330,26 @@
   color: #c9a646;
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE FIX (CLEAN)
+========================= */
+
 @media (max-width: 768px) {
+
   .projects-grid {
     grid-template-columns: 1fr;
   }
+
 }
+
+/* =========================
+   CARD TOP LINE EFFECT
+========================= */
+
+.project-card {
+  position: relative; /* ❗ აუცილებელია */
+}
+
 .project-card::before {
   content: "";
   position: absolute;
