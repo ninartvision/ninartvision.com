@@ -7,11 +7,37 @@
   <meta name="description" content="ნინი მჟავია — Full Digital Support სპეციალისტი. ვებგვერდის შექმნა, SEO, UI/UX დიზაინი, ვიდეო მონტაჟი და ციფრული მარკეტინგი ბიზნესებისთვის.">
   <link rel="canonical" href="https://ninartvision.com/about.html">
 
+  <!-- Open Graph -->
+  <meta property="og:title" content="ჩემ შესახებ — Ninart Vision">
+  <meta property="og:description" content="ნინი მჟავია — ვებ დეველოპერი, UI/UX დიზაინერი და ციფრული სტრატეგი ბიზნესებისთვის.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ninartvision.com/about.html">
+  <meta property="og:image" content="https://ninartvision.com/images/og-image.png">
+  <meta property="og:locale" content="ka_GE">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ჩემ შესახებ — Ninart Vision">
+  <meta name="twitter:description" content="ნინი მჟავია — ვებ დეველოპერი, UI/UX დიზაინერი და ციფრული სტრატეგი ბიზნესებისთვის.">
+  <meta name="twitter:image" content="https://ninartvision.com/images/og-image.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "მთავარი", "item": "https://ninartvision.com/" },
+      { "@type": "ListItem", "position": 2, "name": "ჩემ შესახებ", "item": "https://ninartvision.com/about.html" }
+    ]
+  }
+  </script>
+
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" href="images/favicon.png">
 
   <!-- Icons -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -24,8 +50,8 @@
 <!-- HEADER -->
 <header>
   <nav>
-    <a href="index.html" class="logo">
-      <img src="images/logo.png" alt="Ninart Vision logo">
+    <a href="index.html" class="logo" aria-label="Ninart Vision — მთავარი">
+      <img src="images/logo.png" alt="Ninart Vision logo" width="120" height="40">
     </a>
 
    <ul id="navLinks" class="nav-links">
@@ -40,23 +66,23 @@
 
     <div class="nav-controls">
       <div class="lang-dropdown">
-        <button class="lang-current" id="langToggle">
-          <img src="images/georgia.png" alt="GE">
+        <button class="lang-current" id="langToggle" aria-haspopup="true" aria-expanded="false" aria-controls="langMenu">
+          <img src="images/georgia.png" alt="" aria-hidden="true">
           <span class="lang-text">KA</span>
-          <span class="arrow">▾</span>
+          <span class="arrow">&#9662;</span>
         </button>
 
-        <ul class="lang-menu" id="langMenu">
-          <li data-lang="ka">
-            <img src="images/georgia.png" alt=""> KA
+        <ul class="lang-menu" id="langMenu" role="menu" aria-label="Language menu">
+          <li data-lang="ka" role="menuitem">
+            <img src="images/georgia.png" alt="" aria-hidden="true"> KA
           </li>
-          <li data-lang="en">
-            <img src="images/america.png" alt=""> EN
+          <li data-lang="en" role="menuitem">
+            <img src="images/america.png" alt="" aria-hidden="true"> EN
           </li>
         </ul>
       </div>
 
-      <button class="hamburger" id="hamburger">
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
         <span></span>
         <span></span>
         <span></span>

@@ -10,11 +10,36 @@
 <link rel="stylesheet" href="css/portfolio.css">
 
   <meta name="description" content="Ninart Vision-ის პორტფოლიო — ვებგვერდები, ბრენდინგი, ვიდეო რგოლები და ვიდეო მონტაჟი." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="პორტფოლიო — Ninart Vision">
+  <meta property="og:description" content="ვებგვერდები, ბრენდინგი, ვიდეო რგოლები და ვიდეო მონტაჟი — Ninart Vision-ის სამუშავრო.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ninartvision.com/portfolio.html">
+  <meta property="og:image" content="https://ninartvision.com/images/og-image.png">
+  <meta property="og:locale" content="ka_GE">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="პორტფოლიო — Ninart Vision">
+  <meta name="twitter:description" content="ვებგვერდები, ბრენდინგი, ვიდეო რგოლები და ვიდეო მონტაჟი — Ninart Vision-ის სამუშავრო.">
+  <meta name="twitter:image" content="https://ninartvision.com/images/og-image.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "მთავარი", "item": "https://ninartvision.com/" },
+      { "@type": "ListItem", "position": 2, "name": "პორტფოლიო", "item": "https://ninartvision.com/portfolio.html" }
+    ]
+  }
+  </script>
 </head>
 <body>
   <header>
     <nav>
-      <a href="index.html" class="logo"><img src="images/logo.png" alt="Ninart Vision logo" data-alt-key="logo.alt"></a>
+      <a href="index.html" class="logo" aria-label="Ninart Vision — მთავარი"><img src="images/logo.png" alt="Ninart Vision logo" data-alt-key="logo.alt" width="120" height="40"></a>
       <ul id="navLinks" class="nav-links">
   <li><a href="index.html"><span data-key="nav.home">Home</span></a></li>
   <li><a href="about.html"><span data-key="nav.about">About</span></a></li>
@@ -26,10 +51,10 @@
 
       <div class="nav-controls">
         <div class="lang-dropdown">
-          <button class="lang-current" id="langToggle">
-            <img src="images/georgia.png" alt="GE">
+          <button class="lang-current" id="langToggle" aria-haspopup="true" aria-expanded="false" aria-controls="langMenu">
+            <img src="images/georgia.png" alt="" aria-hidden="true">
             <span class="lang-text">KA</span>
-            <span class="arrow">▾</span>
+            <span class="arrow">&#9662;</span>
           </button>
           <ul class="lang-menu" id="langMenu" role="menu" aria-label="Language menu">
             <li data-lang="ka" role="menuitem"><img src="images/georgia.png" alt="" aria-hidden="true"> KA</li>

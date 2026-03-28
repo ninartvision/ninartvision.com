@@ -35,6 +35,14 @@ body {
   overflow: auto;
 }
 
+/* ========== BRAND TOKENS ========== */
+:root {
+  --gold:       #C9A94F;
+  --gold-light: #d6c28a;
+  --gold-dark:  #aa9968;
+  --gold-glow:  rgba(201, 169, 79, 0.25);
+}
+
 
 
 /* ========== HEADER LAYOUT (fixed, flex row, responsive) ========== */
@@ -132,50 +140,6 @@ header > nav {
   header > nav { padding: 0 2rem; }
   .logo { margin-right: 1rem; }
   .nav-controls { margin-left: 1rem; }
-}
-
-.hero-title.hero-stack > span {
-  letter-spacing: 0;     /* ნორმალური */
-  transform: none;       /* არცერთი ტრანსფორმაცია */
-  line-height: 1.1;
-}
-
-/* Ensure the hero title uses the display-capable font */
-.hero-title {
-  font-family: "BPG Nateli", sans-serif;
-  line-height: 1.15;
-}
-
-/* Wrapper */
-.hero-inner {
-  max-width: clamp(420px, 60vw, 850px);
-  padding: 0 20px;
-}
-
-.hero-title.hero-stack {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-bottom: 24px;
-  line-height: 1.15;
-}
-
-.hero-title.hero-stack > span {
-  display: inline-block;
-  font-size: clamp(1.8rem, 5vw, 3rem);
-}
-
-@media (max-width: 600px) {
-  .hero-title.hero-stack {
-    flex-direction: column;
-    align-items: center;
-  }
-  .hero-title.hero-stack > span {
-    display: block;
-  }
 }
 
 /* ========== LANGUAGE SWITCH ========== */
@@ -344,6 +308,9 @@ header > nav {
 .hero-title .line-2, .hero-title .line-3 { font-size: 2.4rem; }
 .hero-title .line-4 { font-size: 1.8rem; }
 
+/* Hide empty hero spans (e.g. hero3 in Georgian layout) */
+.hero-title.hero-stack > span:empty { display: none; }
+
 .hero-title { font-family: "BPG Nateli", sans-serif; line-height: 1.15; }
 
 /* ===== SUBTEXT ===== */
@@ -391,13 +358,6 @@ header > nav {
   gap: 2rem;
 }
 
-.service-card {
-  padding: 1.8rem;
-  border: 1px solid rgba(255,255,255,0.1);
-  background: rgba(255,255,255,0.03);
-  border-radius: 10px;
-}
-
 /* ===== Services blog-style card layout (scoped) ===== */
 .services-blog .services-list {
   display: grid;
@@ -436,12 +396,11 @@ header > nav {
 /* ===== SERVICE TITLE FIX ===== */
 
 .service-card h3 {
-  font-size: 20px;
+  font-size: clamp(0.9rem, 2vw, 1.25rem);
   font-weight: 600;
   text-align: center;
   margin-bottom: 14px;
-
-  white-space: nowrap;        /* ერთ ხაზზე */
+  overflow-wrap: break-word;
 }
 
 .service-card p {
