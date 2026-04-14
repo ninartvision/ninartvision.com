@@ -1,4 +1,4 @@
-/* BPG font */
+﻿/* BPG font */
 @font-face {
   font-family: "BPG";
   src: url('../fonts/bpg.woff2') format('woff2'),
@@ -544,7 +544,8 @@ header > nav {
 
 .services-blog .service-card img {
   width: 100%;
-  height: 180px;
+  height: auto;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   display: block;
 }
@@ -1474,7 +1475,7 @@ header > nav,
     /* გვერდებიდან fade */
     linear-gradient(to left, #000 0%, transparent 30%, transparent 70%, #000 100%),
 
-    url("../images/earth.png") center bottom no-repeat;
+    url("../images/earth.webp") center bottom no-repeat;
 
   background-size: cover;
   pointer-events: none;
