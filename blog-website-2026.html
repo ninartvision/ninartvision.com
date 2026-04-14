@@ -41,19 +41,30 @@
   <!-- HEADER -->
   <header>
     <nav>
-      <a href="index.html" class="logo" aria-label="მთავარი">
-        <img src="images/logo.webp" alt="Ninart Vision logo">
+      <a href="index.html" class="logo" aria-label="Ninart Vision — მთავარი">
+        <img src="images/logo.webp" alt="Ninart Vision logo" data-alt-key="logo.alt" width="120" height="40">
       </a>
       <ul id="navLinks" class="nav-links">
-        <li><a href="index.html"><span data-key="nav.home">მთავარი</span></a></li>
-        <li><a href="about.html"><span data-key="nav.about">ჩვენ შესახებ</span></a></li>
-        <li><a href="services.html"><span data-key="nav.services">სერვისები</span></a></li>
-        <li><a href="portfolio.html"><span data-key="nav.portfolio">პორტფოლიო</span></a></li>
-        <li><a href="news.html"><span data-key="nav.news">სიახლეები</span></a></li>
-        <li><a href="contact.html"><span data-key="nav.contact">კონტაქტი</span></a></li>
+        <li><a href="index.html"><span data-key="nav.home">Home</span></a></li>
+        <li><a href="about.html"><span data-key="nav.about">About</span></a></li>
+        <li><a href="services.html"><span data-key="nav.services">Services</span></a></li>
+        <li><a href="portfolio.html"><span data-key="nav.portfolio">Portfolio</span></a></li>
+        <li><a href="news.html"><span data-key="nav.news">News</span></a></li>
+        <li><a href="contact.html"><span data-key="nav.contact">Contact</span></a></li>
       </ul>
       <div class="nav-controls">
-        <button class="hamburger" id="hamburger" aria-label="ნავიგაციის გახსნა" aria-expanded="false" aria-controls="navLinks">
+        <div class="lang-dropdown">
+          <button class="lang-current" id="langToggle" aria-haspopup="true" aria-expanded="false" aria-controls="langMenu">
+            <img src="images/georgia.webp" alt="" aria-hidden="true">
+            <span class="lang-text">KA</span>
+            <span class="arrow">&#9662;</span>
+          </button>
+          <ul class="lang-menu" id="langMenu" role="menu" aria-label="Language menu">
+            <li data-lang="ka" role="menuitem"><img src="images/georgia.webp" alt="" aria-hidden="true"> KA</li>
+            <li data-lang="en" role="menuitem"><img src="images/america.webp" alt="" aria-hidden="true"> EN</li>
+          </ul>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
           <span></span><span></span><span></span>
         </button>
       </div>
