@@ -763,14 +763,10 @@ if (particlesContainer && typeof particlesJS !== "undefined") {
   // close on Esc
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeCalculator(); });
 
-});
-document.addEventListener("DOMContentLoaded", function () {
-
   /* ================= FAQ TOGGLE ================= */
 
   document.querySelectorAll(".faq-item").forEach(item => {
     const question = item.querySelector(".faq-question");
-
     if (question) {
       question.addEventListener("click", () => {
         item.classList.toggle("active");
@@ -778,24 +774,57 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-
   /* ================= WHATSAPP WIDGET ================= */
 
-  const popup = document.getElementById("waPopup");
-  const floatBtn = document.getElementById("waFloat");
-  const closeBtn = document.getElementById("waClose");
+  const waPopup = document.getElementById("waPopup");
+  const waFloat = document.getElementById("waFloat");
+  const waClose = document.getElementById("waClose");
 
-  if (floatBtn && popup) {
-    floatBtn.addEventListener("click", function () {
-      popup.style.display =
-        popup.style.display === "block" ? "none" : "block";
+  if (waFloat && waPopup) {
+    waFloat.addEventListener("click", function () {
+      waPopup.style.display = waPopup.style.display === "block" ? "none" : "block";
     });
   }
 
-  if (closeBtn && popup) {
-    closeBtn.addEventListener("click", function () {
-      popup.style.display = "none";
+  if (waClose && waPopup) {
+    waClose.addEventListener("click", function () {
+      waPopup.style.display = "none";
     });
   }
 
+  /* ================= NEWS ACCORDION ================= */
+
+  document.querySelectorAll(".news-header").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const content = btn.nextElementSibling;
+      const icon = btn.querySelector(".news-icon");
+      const isOpen = content.style.maxHeight;
+
+      document.querySelectorAll(".news-content").forEach(el => el.style.maxHeight = null);
+      document.querySelectorAll(".news-icon").forEach(i => i.style.transform = "rotate(0deg)");
+
+      if (!isOpen) {
+        content.style.maxHeight = content.scrollHeight + "px";
+        icon.style.transform = "rotate(180deg)";
+      }
+    });
+  });
+
+});
+
+/* ================= WHATSAPP HINT & SHAKE (on load) ================= */
+
+window.addEventListener("load", function () {
+  const hint = document.getElementById("waHint");
+  const btn = document.querySelector(".wa-float");
+
+  if (hint) {
+    setTimeout(() => hint.classList.add("show"), 800);
+    setTimeout(() => hint.classList.remove("show"), 5000);
+  }
+
+  if (!localStorage.getItem("waShown") && btn) {
+    btn.classList.add("shake");
+    localStorage.setItem("waShown", "true");
+  }
 });

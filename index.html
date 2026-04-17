@@ -437,48 +437,6 @@
   </button>
 
 </div>
-<script>
-window.addEventListener("load", function() {
-
-  const hint = document.getElementById("waHint");
-  const btn = document.querySelector(".wa-float");
-
-  // Slide hint
-  if (hint) {
-    setTimeout(() => hint.classList.add("show"), 800);
-    setTimeout(() => hint.classList.remove("show"), 5000);
-  }
-
-  // Shake only first visit
-  if (!localStorage.getItem("waShown") && btn) {
-    btn.classList.add("shake");
-    localStorage.setItem("waShown", "true");
-  }
-
-});
-</script>
-
-<script>
-  document.querySelectorAll(".news-header").forEach(btn => {
-    btn.addEventListener("click", () => {
-
-      const content = btn.nextElementSibling;
-      const icon = btn.querySelector(".news-icon");
-      const isOpen = content.style.maxHeight;
-
-      document.querySelectorAll(".news-content")
-        .forEach(el => el.style.maxHeight = null);
-
-      document.querySelectorAll(".news-icon")
-        .forEach(i => i.style.transform = "rotate(0deg)");
-
-      if (!isOpen) {
-        content.style.maxHeight = content.scrollHeight + "px";
-        icon.style.transform = "rotate(180deg)";
-      }
-    });
-  });
-</script>
 
 
 </body>

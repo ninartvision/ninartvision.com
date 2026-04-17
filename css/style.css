@@ -8,9 +8,9 @@
   font-display: swap;
 }
 
-/* Apply BPG font globally */
-body, h1, h2, h3, h4, h5, h6, button, input, textarea, select, a, p, li, ul, ol, span, div {
-  font-family: "BPG", Arial, sans-serif;
+/* Form elements don't inherit font-family by default */
+button, input, textarea, select {
+  font-family: inherit;
 }
 
 
@@ -28,7 +28,6 @@ html {
 }
 
 body {
-  margin: 0;
   font-family: "BPG", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   background: #000;
   color: #fff;
@@ -44,10 +43,11 @@ main {
 
 /* ========== BRAND TOKENS ========== */
 :root {
-  --gold:       #C9A94F;
-  --gold-light: #d6c28a;
-  --gold-dark:  #aa9968;
-  --gold-glow:  rgba(201, 169, 79, 0.25);
+  --gold:          #C9A94F;
+  --gold-light:    #d6c28a;
+  --gold-dark:     #aa9968;
+  --gold-glow:     rgba(201, 169, 79, 0.25);
+  --header-height: 80px;
 }
 
 
@@ -62,8 +62,6 @@ header {
   z-index: 1000;
 }
 
-/* Header height variable used when centering full-screen sections */
-:root { --header-height: 80px; }
 @media (max-width: 768px) { :root { --header-height: 64px; } }
 
 /* If page contains .about-content, center that block in the viewport while
@@ -362,13 +360,6 @@ header > nav {
 
 /* ========== SERVICES ========== */
 
-.services-grid {
-  margin-top: 2.5rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-  gap: 2rem;
-}
-
 /* ===== Services blog-style card layout (scoped) ===== */
 .services-blog .services-list {
   display: grid;
@@ -387,40 +378,6 @@ header > nav {
   display: flex;
   flex-direction: column;
 }
-.service-card {
-  padding: 40px 30px;
-  border-radius: 22px;
-  background: rgba(255,255,255,0.04);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.1);
-  transition: 0.4s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.service-card:hover {
-  transform: translateY(-10px);
-  border-color: rgba(219, 192, 102, 0.8);
-  box-shadow: 0 0 40px rgba(219, 192, 102, 0.25);
-}
-
-/* ===== SERVICE TITLE FIX ===== */
-
-.service-card h3 {
-  font-size: clamp(0.9rem, 2vw, 1.25rem);
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 14px;
-  overflow-wrap: break-word;
-}
-
-.service-card p {
-  text-align: center;
-  margin: 0 auto;
-  max-width: 260px;
-  opacity: 0.9;
-}
-
 /* ================= CALCULATOR MODAL ================= */
 .calc-modal {
   position: fixed;
@@ -1051,38 +1008,6 @@ header > nav,
   width: 100%;
 }
 
-/* Decorative divider for main hero title (short, centered, subtle glow) */
-.hero-title .line-1 {
-  display: inline-block;
-  position: relative;
-}
-
-.hero-title .line-1::after {
-  content: "";
-  display: block;
-  width: clamp(60px, 10vw, 90px);
-  height: 1.5px;
-  margin: 16px auto 0; /* spacing below heading (14-20px) */
-  background: linear-gradient(90deg, #C9A94F 0%, #D6C28A 100%);
-  border-radius: 2px;
-  box-shadow: 0 6px 18px rgba(201,169,79,0.08), 0 0 8px rgba(201,169,79,0.06);
-  filter: blur(0.36px);
-  transform: translateZ(0);
-  pointer-events: none;
-}
-
-@media (max-width: 420px) {
-  .hero-title .line-1::after {
-    width: 60px;
-    margin-top: 14px;
-    height: 1px;
-  }
-}
-
-/* Move decorative divider from small pre-title (.line-1) to large main heading (.line-2) */
-/* Hide previous .line-1 divider to avoid duplicate lines */
-.hero-title .line-1::after { display: none !important; }
-
 .hero-title {
   position: relative;
 }
@@ -1292,63 +1217,7 @@ header > nav,
   gap: 25px;
   margin-top: 25px;
 }
-/* ===== SERVICES CTA ===== */
-
-.services-cta {
-  margin-top: 70px;
-  display: flex;
-  justify-content: center;
-}
-
-.services-btn {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-
-  padding: 14px 32px;
-  border-radius: 999px;
-
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-
-  text-decoration: none;
-  color: #d6c28a;
-
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.18);
-  backdrop-filter: blur(6px);
-
-  /* მუდმივი depth */
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.15),
-    inset 0 -1px 0 rgba(0,0,0,0.5),
-    0 8px 22px rgba(0,0,0,0.45);
-
-  transition: 
-    transform 220ms cubic-bezier(.2,.9,.2,1),
-    box-shadow 220ms cubic-bezier(.2,.9,.2,1),
-    background 220ms ease;
-}
-
-/* ===== ARROW ===== */
-
-.services-btn .arrow {
-  font-size: 16px;
-  font-weight: 700;
-
-  color: transparent;
-  -webkit-text-stroke: 1px #d6c28a;
-
-  text-shadow: 0 0 6px rgba(214,194,138,0.5);
-
-  transition: 
-    transform 220ms cubic-bezier(.2,.9,.2,1),
-    text-shadow 220ms ease;
-}
-
-/* SERVICES */
+/* SERVICES GRID */
 .services-grid {
   margin-top: 3rem;
   display: grid;
@@ -1356,9 +1225,11 @@ header > nav,
   gap: 2.5rem;
 }
 
-
 /* SERVICE CARD */
 .service-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
   padding: 2rem;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.04);
@@ -1366,10 +1237,13 @@ header > nav,
   backdrop-filter: blur(10px);
   text-align: center;
   transition: 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .service-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
+  cursor: pointer;
   border-color: #e0c16c;
   box-shadow: 0 10px 30px rgba(0, 198, 255, 0.2);
 }
@@ -1380,31 +1254,59 @@ header > nav,
 }
 
 .service-card h3 {
+  font-weight: 600;
+  text-align: center;
   margin-bottom: 0.8rem;
   font-size: 1.2rem;
+  overflow-wrap: break-word;
 }
 
 .service-card p {
   font-size: 0.95rem;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 260px;
   opacity: 0.8;
 }
 
-/* CTA */
+/* ===== SERVICES CTA ===== */
+
 .services-cta {
-  text-align: center;
   margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .services-btn {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 8px;
   padding: 12px 28px;
   border-radius: 30px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-decoration: none;
   background: linear-gradient(90deg, #00c6ff, #0072ff);
   color: #fff;
-  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.18);
+  backdrop-filter: blur(6px);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.15),
+    inset 0 -1px 0 rgba(0,0,0,0.5),
+    0 8px 22px rgba(0,0,0,0.45);
   transition: 0.3s ease;
+}
+
+.services-btn .arrow {
+  font-size: 16px;
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 1px #d6c28a;
+  text-shadow: 0 0 6px rgba(214,194,138,0.5);
+  transition: transform 220ms cubic-bezier(.2,.9,.2,1), text-shadow 220ms ease;
 }
 
 .services-btn:hover {
@@ -1481,10 +1383,10 @@ header > nav,
   z-index: 0;
   opacity: 0.7;
 }
-/* ==== FORCE IMAGE FIX ==== */
+/* ========== CODE SECTION ========== */
 
 .code-section {
-  padding: 120px 20px;
+  padding: 140px 20px;
   background: #000;
   overflow-x: hidden;
 }
@@ -1493,10 +1395,10 @@ header > nav,
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px;
   flex-wrap: wrap;
+  gap: 80px;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 80px auto 0;
 }
 
 .code-card {
@@ -1510,32 +1412,6 @@ header > nav,
   height: auto !important;
   display: block;
 }
-@media (max-width: 768px) {
-  .code-wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .code-card {
-    width: 100%;
-    max-width: 420px;
-  }
-}
-.code-section {
-  padding: 140px 20px;
-  background: #000;
-}
-
-.code-wrapper {
-  display: flex;
-  gap: 80px;              /* 🔥 მეტი დაშორება */
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 80px;       /* ზემოდან ჰაერი */
-}
-
-
-
 
 .code-btn {
   position: relative;
@@ -1598,6 +1474,7 @@ header > nav,
     gap: 100px;
   }
 
+  .code-card,
   .code-btn {
     width: 100%;
     max-width: 420px;
@@ -1776,6 +1653,7 @@ header > nav,
   font-size: 18px;
 
   color: #d6c28a;
+  text-decoration: none;
 
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -1788,21 +1666,9 @@ header > nav,
   background: rgba(214, 194, 138, 0.15);
   color: #ffffff;
   transform: translateY(-4px);
-}
-.social-icons a {
-  text-decoration: none !important;
-}
-.service-card {
-  display: block;
   text-decoration: none;
-  color: inherit;
-  transition: 0.3s ease;
 }
 
-.service-card:hover {
-  transform: translateY(-6px);
-  cursor: pointer;
-}
 .home-news {
   padding: 80px 0;
 }
@@ -1888,17 +1754,15 @@ header > nav,
   color: #4da6ff;
   text-decoration: none;
 }
-.news-title {
-  margin-bottom: 25px; /* ადრე უფრო დიდი იყო */
-  margin-top: -20px;   /* ოდნავ ზემოთ აწევა */
-}
+
 .news-content p {
   font-size: 14px;
   line-height: 1.6;
   color: rgba(255,255,255,0.85);
 }
+
 .news-title {
-  margin: 0;                 /* ზედმეტი დაშორების მოხსნა */
+  margin: 0;
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 4px;
