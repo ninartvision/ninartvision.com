@@ -30,19 +30,19 @@
 /* Individual Hero Covers */
 
 .web-hero {
-  background-image: url("../images/covers/cover1.png");
+  background-image: url("../images/covers/cover1.webp");
 }
 
 .branding-hero {
-  background-image: url("../images/covers/cover2.png");
+  background-image: url("../images/covers/cover2.webp");
 }
 
 .video-hero {
-  background-image: url("../images/covers/cover3.png");
+  background-image: url("../images/covers/cover3.webp");
 }
 
 .editing-hero {
-  background-image: url("../images/covers/cover4.png");
+  background-image: url("../images/covers/cover4.webp");
 }
 
 
@@ -113,19 +113,19 @@
 /* Category Cover Backgrounds */
 
 .web-card {
-  background-image: url("../images/covers/cover1.png");
+  background-image: url("../images/covers/cover1.webp");
 }
 
 .branding-card {
-  background-image: url("../images/covers/cover2.png");
+  background-image: url("../images/covers/cover2.webp");
 }
 
 .video-card {
-  background-image: url("../images/covers/cover3.png");
+  background-image: url("../images/covers/cover3.webp");
 }
 
 .editing-card {
-  background-image: url("../images/covers/cover4.png");
+  background-image: url("../images/covers/cover4.webp");
 }
 
 
@@ -162,7 +162,7 @@
   overflow: hidden;
 
   background-color: #111;
-  background-image: url("../images/covers/site1.png");
+  background-image: url("../images/covers/site1.webp");
   background-size: cover;
   background-position: center top;
 
