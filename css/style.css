@@ -1802,7 +1802,7 @@ header > nav,
   font-weight: 700;
   letter-spacing: 4px;
   color: #ffffff;
-  text-align: center;
+  text-align: left;
   position: relative;
   text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
 }
@@ -1810,11 +1810,12 @@ header > nav,
 .web-projects-heading::after {
   content: "";
   display: block;
-  width: 120px;
-  height: 3px;
-  background: #00bfff;
-  margin: 10px auto 48px;
-  border-radius: 3px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #00bfff, rgba(0, 191, 255, 0.15));
+  box-shadow: 0 0 6px rgba(0, 191, 255, 0.3);
+  margin: 10px 0 48px;
+  border-radius: 2px;
 }
 
 .projects-grid {
