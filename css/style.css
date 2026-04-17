@@ -1812,8 +1812,7 @@ header > nav,
   display: block;
   width: 120px;
   height: 3px;
-  background: linear-gradient(to right, transparent, #00bfff 28%, #00bfff 72%, transparent);
-  box-shadow: 0 0 8px rgba(0, 191, 255, 0.45);
+  background: #00bfff;
   margin: 10px auto 48px;
   border-radius: 3px;
 }
