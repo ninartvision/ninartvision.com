@@ -1304,9 +1304,9 @@ header > nav,
 /* ========== CONTACT CARD ========== */
 .contact-card {
   width: 100%;
-  max-width: 520px;
+  max-width: 680px;
   margin: 48px auto 80px;
-  padding: 44px 48px;
+  padding: 44px 72px;
   text-align: center;
   background: linear-gradient(
     160deg,
@@ -1411,6 +1411,13 @@ header > nav,
   transform: translateY(-3px);
   box-shadow: 0 6px 24px rgba(0, 191, 255, 0.2);
   border-color: rgba(0, 191, 255, 0.3);
+}
+
+@media (max-width: 720px) {
+  .contact-card {
+    max-width: 100%;
+    padding: 36px 28px;
+  }
 }
 /* SERVICES GRID */
 .services-grid {
