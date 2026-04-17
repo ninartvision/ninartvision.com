@@ -907,6 +907,41 @@ footer {
   opacity: 0.95;
 }
 
+/* Radial glow orbs behind About page content */
+body.page-about::before,
+body.page-about::after {
+  content: "";
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(90px);
+  animation: orb-drift 20s ease-in-out infinite alternate;
+}
+
+body.page-about::before {
+  width: 560px;
+  height: 560px;
+  top: -100px;
+  left: -140px;
+  background: radial-gradient(ellipse, rgba(0, 80, 180, 0.25) 0%, transparent 70%);
+}
+
+body.page-about::after {
+  width: 420px;
+  height: 420px;
+  bottom: -80px;
+  right: -100px;
+  background: radial-gradient(ellipse, rgba(201, 169, 79, 0.1) 0%, transparent 68%);
+  animation-duration: 26s;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes orb-drift {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(28px, 18px) scale(1.07); }
+}
+
 .about-content {
   max-width: 700px;
   padding: 48px 52px;
