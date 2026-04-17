@@ -889,11 +889,11 @@ footer {
   box-shadow: 0 0 8px rgba(0, 191, 255, 0.45);
   border-radius: 3px;
   margin-top: 12px;
-  transition: width 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: width 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #about h1.underline-ready::after {
-  width: 56px;
+  width: 100%;
 }
 
 #background {
