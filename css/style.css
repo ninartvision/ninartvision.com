@@ -325,7 +325,7 @@ header > nav {
 /* Hide empty hero spans (e.g. hero3 in Georgian layout) */
 .hero-title.hero-stack > span:empty { display: none; }
 
-.hero-title { font-family: "BPG Nateli", sans-serif; line-height: 1.15; }
+.hero-title { font-family: "BPG", system-ui, sans-serif; line-height: 1.15; }
 
 /* ===== SUBTEXT ===== */
 
