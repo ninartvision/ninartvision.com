@@ -1,4 +1,4 @@
-﻿header {
+header {
   position: fixed;
   top: 0;
   width: 100%;
@@ -13,7 +13,7 @@ body {
 /* ---------- HERO ---------- */
 .hero-earth {
   position: relative;
-  background: url("../images/earth.webp") center top / cover no-repeat;
+  background: url("../images/earth.png") center top / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;

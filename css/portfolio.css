@@ -1,4 +1,4 @@
-﻿
+
 /* =========================
    HERO SECTION
 ========================= */
@@ -30,19 +30,19 @@
 /* Individual Hero Covers */
 
 .web-hero {
-  background-image: url("../images/covers/cover1.webp");
+  background-image: url("../images/covers/cover1.png");
 }
 
 .branding-hero {
-  background-image: url("../images/covers/cover2.webp");
+  background-image: url("../images/covers/cover2.png");
 }
 
 .video-hero {
-  background-image: url("../images/covers/cover3.webp");
+  background-image: url("../images/covers/cover3.png");
 }
 
 .editing-hero {
-  background-image: url("../images/covers/cover4.webp");
+  background-image: url("../images/covers/cover4.png");
 }
 
 
@@ -113,19 +113,19 @@
 /* Category Cover Backgrounds */
 
 .web-card {
-  background-image: url("../images/covers/cover1.webp");
+  background-image: url("../images/covers/cover1.png");
 }
 
 .branding-card {
-  background-image: url("../images/covers/cover2.webp");
+  background-image: url("../images/covers/cover2.png");
 }
 
 .video-card {
-  background-image: url("../images/covers/cover3.webp");
+  background-image: url("../images/covers/cover3.png");
 }
 
 .editing-card {
-  background-image: url("../images/covers/cover4.webp");
+  background-image: url("../images/covers/cover4.png");
 }
 
 
@@ -162,7 +162,7 @@
   overflow: hidden;
 
   background-color: #111;
-  background-image: url("../images/covers/site1.webp");
+  background-image: url("../images/covers/site1.png");
   background-size: cover;
   background-position: center top;
 
@@ -177,7 +177,7 @@
 
 .featured-link--loftline {
   background-color: #111;
-  background-image: url("../images/covers/site2.webp");
+  background-image: url("../images/covers/site2.png");
   background-size: cover;
   background-position: center;
 }
@@ -274,18 +274,11 @@
 }
 
 /* IMAGE */
-.project-image {
-  width: 100%;
-  overflow: hidden;
-}
-
 .project-image img {
   width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
+  height: 300px;
   object-fit: cover;
-  display: block;
-  transition: transform 0.4s ease;
+  transition: 0.4s ease;
 }
 
 .project-card:hover .project-image img {
@@ -408,12 +401,8 @@
 
 .project-gallery img {
   width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  display: block;
   border-radius: 18px;
-  transition: transform 0.4s ease;
+  transition: 0.4s ease;
 }
 
 .project-gallery img:hover {
@@ -569,125 +558,4 @@ main {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-/* =========================
-   FEATURED PROJECTS WRAP
-========================= */
-
-.featured-projects-wrap {
-  margin-top: 80px;
-  padding-bottom: 40px;
-}
-
-.section-heading {
-  font-size: clamp(22px, 3vw, 32px);
-  font-weight: 600;
-  color: #ffffff;
-  text-align: center;
-  margin-bottom: 48px;
-  letter-spacing: 1px;
-  position: relative;
-}
-
-.section-heading::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 2px;
-  background: linear-gradient(to right, #c9a646, #e7ca7b);
-  margin: 14px auto 0;
-  border-radius: 2px;
-}
-
-/* =========================
-   TECH STACK TAGS
-========================= */
-
-.project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 16px;
-  margin-bottom: 4px;
-}
-
-.tag {
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.8px;
-  color: #c9a646;
-  border: 1px solid rgba(201, 166, 70, 0.35);
-  border-radius: 4px;
-  padding: 3px 10px;
-  background: rgba(201, 166, 70, 0.07);
-  text-transform: uppercase;
-  transition: 0.3s ease;
-}
-
-.project-card:hover .tag {
-  border-color: rgba(201, 166, 70, 0.7);
-  background: rgba(201, 166, 70, 0.12);
-}
-
-/* =========================
-   VISIT WEBSITE BUTTON
-========================= */
-
-.visit-btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 22px;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  color: #0d0d0d;
-  background: linear-gradient(135deg, #c9a646, #e7ca7b);
-  border-radius: 6px;
-  text-decoration: none;
-  transition: 0.3s ease;
-  cursor: pointer;
-}
-
-.visit-btn:hover {
-  background: linear-gradient(135deg, #e7ca7b, #c9a646);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(201, 166, 70, 0.3);
-}
-
-/* =========================
-   FADE-IN CARD ANIMATION
-========================= */
-
-.fade-in-card {
-  opacity: 0;
-  transform: translateY(28px);
-  animation: fadeInCard 0.7s ease forwards;
-}
-
-.fade-in-card:nth-child(2) {
-  animation-delay: 0.15s;
-}
-
-@keyframes fadeInCard {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* =========================
-   RESPONSIVE – PROJECTS GRID
-========================= */
-
-@media (max-width: 800px) {
-  .featured-projects-wrap {
-    margin-top: 60px;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* aspect-ratio handles sizing on mobile – no fixed heights needed */
 }
