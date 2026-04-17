@@ -1810,12 +1810,20 @@ header > nav,
 .web-projects-heading::after {
   content: "";
   display: block;
-  width: 100%;
+  width: 140px;
   height: 2px;
-  background: linear-gradient(to right, #00bfff, rgba(0, 191, 255, 0.15));
-  box-shadow: 0 0 6px rgba(0, 191, 255, 0.3);
+  background: linear-gradient(to right, #00bfff, rgba(0, 191, 255, 0.5));
+  box-shadow: 0 0 6px rgba(0, 191, 255, 0.4);
   margin: 10px 0 48px;
   border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.4s ease;
+  will-change: transform;
+}
+
+.web-projects-heading:hover::after {
+  transform: scaleX(1);
 }
 
 .projects-grid {
