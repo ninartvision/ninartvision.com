@@ -359,8 +359,8 @@ header > nav {
 .section-text {
   max-width: 650px;
   margin: auto;
-  line-height: 1.5;
-  opacity: 0.85;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.78);
 }
 
 /* ========== SERVICES ========== */
@@ -1832,11 +1832,13 @@ header > nav,
 }
 
 .web-projects-subtitle {
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.93rem;
+  color: rgba(255, 255, 255, 0.75);
   margin: 0 0 18px;
-  line-height: 1.6;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
   max-width: 560px;
+  font-weight: 400;
 }
 
 .web-projects-divider {
@@ -1963,10 +1965,10 @@ header > nav,
 }
 
 .project-desc {
-  font-size: 0.84rem;
-  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.72);
   margin: 0 0 1rem;
-  line-height: 1.5;
+  line-height: 1.65;
 }
 
 .project-tags {
