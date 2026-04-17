@@ -883,20 +883,17 @@ footer {
 #about h1::after {
   content: "";
   display: block;
-  width: 48px;
+  width: 0;
   height: 3px;
   background: #00bfff;
   box-shadow: 0 0 8px rgba(0, 191, 255, 0.45);
   border-radius: 3px;
   margin-top: 12px;
-  transform-origin: left center;
-  animation: underline-expand 0.55s cubic-bezier(0.4, 0, 0.2, 1) both;
-  animation-delay: 0.15s;
+  transition: width 0.55s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@keyframes underline-expand {
-  from { transform: scaleX(0); opacity: 0; }
-  to   { transform: scaleX(1); opacity: 1; }
+#about h1.underline-ready::after {
+  width: 56px;
 }
 
 #background {

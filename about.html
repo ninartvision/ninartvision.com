@@ -168,5 +168,19 @@ VANTA.CLOUDS({
 <!-- MAIN JS (ეს აუცილებელია ენის dropdown-ისთვის) -->
 <script src="main.js" defer></script>
 
+<script>
+(function () {
+  var h1 = document.querySelector('#about h1');
+  if (!h1) return;
+  var obs = new IntersectionObserver(function (entries) {
+    if (entries[0].isIntersecting) {
+      setTimeout(function () { h1.classList.add('underline-ready'); }, 150);
+      obs.disconnect();
+    }
+  }, { threshold: 0.3 });
+  obs.observe(h1);
+})();
+</script>
+
 </body>
 </html>
