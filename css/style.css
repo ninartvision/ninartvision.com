@@ -1827,6 +1827,7 @@ header > nav,
 
 .web-projects-header {
   margin: 0 0 48px;
+  text-align: left;
 }
 
 .web-projects-label {
