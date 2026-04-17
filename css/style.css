@@ -378,17 +378,11 @@ header > nav {
   letter-spacing: 0.05em;
   color: #ffffff;
   text-align: left;
-  margin: 0 0 12px;
+  margin: 0 0 40px;
 }
 
 #services > .container > h2::after {
-  content: "";
-  display: block;
-  width: 100px;
-  height: 3px;
-  background: #00bfff;
-  margin: 12px 0 40px;
-  border-radius: 3px;
+  display: none;
 }
 
 /* Sub-page section titles (.section-title) */
