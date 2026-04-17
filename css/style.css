@@ -1810,9 +1810,10 @@ header > nav,
 .web-projects-heading::after {
   content: "";
   display: block;
-  width: 100px;
+  width: 130px;
   height: 3px;
-  background: #00bfff;
+  background: linear-gradient(to right, transparent, #00bfff 30%, #00bfff 70%, transparent);
+  box-shadow: 0 0 8px rgba(0, 191, 255, 0.45);
   margin: 10px auto 48px;
   border-radius: 3px;
 }
