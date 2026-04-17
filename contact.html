@@ -43,17 +43,21 @@
   </script>
 </head>
 
-<body>
+<body class="page-contact">
+
+  <!-- PARTICLES BACKGROUND -->
+  <div id="particles-js"></div>
+
   <header>
     <nav>
-      <a href="index.html" class="logo"><img src="images/logo.webp" alt="Ninart Vision logo" data-alt-key="logo.alt" width="120" height="40"></a>
+      <a href="index.html" class="logo" aria-label="Ninart Vision — მთავარი"><img src="images/logo.webp" alt="Ninart Vision logo" data-alt-key="logo.alt" width="120" height="40"></a>
       <ul id="navLinks" class="nav-links">
-        <li><a href="index.html"><span data-key="nav.home">Home</span></a></li>
-        <li><a href="about.html"><span data-key="nav.about">About</span></a></li>
-        <li><a href="services.html"><span data-key="nav.services">Services</span></a></li>
-        <li><a href="portfolio.html"><span data-key="nav.portfolio">Portfolio</span></a></li>
-        <li><a href="news.html"><span data-key="nav.news">News</span></a></li>
-        <li><a href="contact.html"><span data-key="nav.contact">Contact</span></a></li>
+        <li><a href="index.html"><span data-key="nav.home">მთავარი</span></a></li>
+        <li><a href="about.html"><span data-key="nav.about">ჩემ შესახებ</span></a></li>
+        <li><a href="services.html"><span data-key="nav.services">სერვისები</span></a></li>
+        <li><a href="portfolio.html"><span data-key="nav.portfolio">პორტფოლიო</span></a></li>
+        <li><a href="news.html"><span data-key="nav.news">სიახლეები</span></a></li>
+        <li><a href="contact.html" class="active"><span data-key="nav.contact">კონტაქტი</span></a></li>
       </ul>
       <div class="nav-controls">
         <div class="lang-dropdown">
@@ -75,7 +79,7 @@
   </header>
 
   <main>
-  <section class="section dark">
+  <section class="section">
     <div class="container contact-card">
 
       <h1 class="contact-name">Nini Mzhavia</h1>
@@ -86,15 +90,13 @@
 
       <div class="contact-info">
         <p>
-          <span class="label">Phone:</span>
+          <strong>ტელეფონი</strong>
           <a href="tel:+995579388833">+995 579 38 88 33</a>
         </p>
 
         <p>
-          <span class="label">Email:</span>
-          <a href="mailto:ninimzhavia9@gmail.com">
-            ninimzhavia9@gmail.com
-          </a>
+          <strong>Email</strong>
+          <a href="mailto:ninimzhavia9@gmail.com">ninimzhavia9@gmail.com</a>
         </p>
       </div>
 
@@ -125,38 +127,17 @@
 
     </div>
   </section>
- <section class="code-section">
-  <div class="container">
-    <div class="code-wrapper">
-
-      <div class="code-btn" style="background-image: url('images/code1.png');">
-        <span>შექმენი ვებგვერდი</span>
-      </div>
-
-      <div class="code-btn" style="background-image: url('images/code2.png');">
-        <span>გაზარდე მომხმარებლების რაოდენობა</span>
-      </div>
-
-      <div class="code-btn" style="background-image: url('images/code3.png');">
-        <span>ინდივიდუალური დიზაინი</span>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
 
 </main>
 
 
   <footer class="footer">
     <div class="container">
-      <p data-key="footer.copyright">© 2026 Ninart Vision. All rights reserved.</p>
+      <p data-key="footer.copyright">© 2026 Ninart Vision. ყველა უფლება დაცულია.</p>
     </div>
   </footer>
 
+  <script src="js/particles.min.js" defer></script>
   <script src="main.js" defer></script>
 </body>
 </html>
