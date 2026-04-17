@@ -1987,7 +1987,7 @@ header > nav,
   animation: fadeIn 1.2s ease forwards;
 }
 
-.news-title::after {
+.news-hero::after {
   content: "";
   display: block;
   width: 100%;
@@ -2001,11 +2001,11 @@ header > nav,
   transition: transform 1s ease-out;
 }
 
-.news-title.underline-ready::after {
+.news-hero.underline-ready::after {
   transform: scaleX(1);
 }
 
-.home-news:hover .news-title::after {
+.home-news:hover .news-hero::after {
   box-shadow: 0 0 16px rgba(0, 200, 255, 0.85);
 }
 

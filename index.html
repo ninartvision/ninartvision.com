@@ -470,15 +470,15 @@ window.addEventListener('load', function () {
   var el = document.querySelector('.hero-title .line-4');
   if (el) setTimeout(function () { el.classList.add('underline-ready'); }, 200);
 
-  var newsTitle = document.querySelector('.news-title');
-  if (newsTitle) {
+  var newsHero = document.querySelector('.news-hero');
+  if (newsHero) {
     var obs = new IntersectionObserver(function (entries) {
       if (entries[0].isIntersecting) {
-        newsTitle.classList.add('underline-ready');
+        newsHero.classList.add('underline-ready');
         obs.disconnect();
       }
     }, { threshold: 0.3 });
-    obs.observe(newsTitle);
+    obs.observe(newsHero);
   }
 });
 </script>
