@@ -602,7 +602,7 @@ main {
 
 /* Section */
 .wp-section {
-  padding-top: 60px;
+  padding-top: calc(var(--header-height, 80px) + 40px);
 }
 
 /* Grid */
