@@ -171,6 +171,12 @@
 <!-- WEB PROJECTS -->
 <section id="web-projects" class="section">
   <div class="container">
+    <div class="web-projects-header">
+      <p class="web-projects-label"><span class="web-projects-label-line"></span>Web Development</p>
+      <h2 class="web-projects-heading">ვებ პროექტები</h2>
+      <p class="web-projects-subtitle">თანამედროვე, სწრაფი და ვიზუალურად გამორჩეული ვებგვერდები.</p>
+      <div class="web-projects-divider"></div>
+    </div>
     <div class="projects-grid">
 
       <a href="https://ninartvision.store" class="project-card" target="_blank" rel="noopener noreferrer" aria-label="ninartvision.store">
@@ -459,6 +465,12 @@
       <!-- SCRIPTS -->
 <script src="js/particles.min.js" defer></script>
 <script src="main.js" defer></script>
+<script>
+window.addEventListener('load', function () {
+  var el = document.querySelector('.hero-title .line-4');
+  if (el) setTimeout(function () { el.classList.add('underline-ready'); }, 200);
+});
+</script>
 
 
 <!-- WhatsApp Widget -->

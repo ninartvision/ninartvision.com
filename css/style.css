@@ -1135,13 +1135,18 @@ header > nav,
 .hero-title .line-4::after {
   content: "";
   display: block;
-  width: clamp(60px, 10vw, 90px);
-  height: 1.5px;
-  margin: 16px auto 0;
-  background: linear-gradient(90deg, #C9A94F 0%, #D6C28A 100%);
+  width: 0;
+  height: 2px;
+  margin: 14px auto 0;
+  background: linear-gradient(90deg, #00bfff 0%, rgba(0, 191, 255, 0.3) 100%);
   border-radius: 2px;
-  box-shadow: 0 6px 18px rgba(201,169,79,0.08),
-              0 0 8px rgba(201,169,79,0.06);
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.4),
+              0 0 20px rgba(0, 191, 255, 0.15);
+  transition: width 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-title .line-4.underline-ready::after {
+  width: clamp(60px, 10vw, 90px);
 }
 
 
