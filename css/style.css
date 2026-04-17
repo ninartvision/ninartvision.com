@@ -1811,10 +1811,9 @@ header > nav,
   content: "";
   display: block;
   width: 100px;
-  height: 2px;
-  background: linear-gradient(to right, transparent, #00bfff 30%, #00bfff 70%, transparent);
-  box-shadow: 0 0 8px rgba(0, 191, 255, 0.4);
-  margin: 12px auto 48px;
+  height: 3px;
+  background: #00bfff;
+  margin: 10px auto 48px;
   border-radius: 3px;
 }
 
