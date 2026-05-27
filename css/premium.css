@@ -558,10 +558,36 @@ body {
   line-height: 1.6;
 }
 
-/* Unified section headers */
+/* Unified section headers — left editorial alignment */
 .section-head,
-.web-projects-header {
+.web-projects-header,
+.news-hero.section-head {
   margin-bottom: clamp(36px, 5vw, 52px);
+  text-align: left;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.section-heading,
+.section-desc,
+.section-label,
+.web-projects-heading,
+.web-projects-subtitle,
+.web-projects-label,
+.news-title {
+  text-align: left;
+}
+
+.section-desc,
+.web-projects-subtitle {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.section-rule,
+.web-projects-divider {
+  margin-left: 0;
+  margin-right: auto;
 }
 
 .section-label,
@@ -845,9 +871,45 @@ body {
 /* Mobile polish */
 @media (max-width: 991px) {
   .section,
+  #web-projects,
+  #services,
   .home-news {
     padding-left: max(1.25rem, env(safe-area-inset-left));
     padding-right: max(1.25rem, env(safe-area-inset-right));
+  }
+
+  .section > .container,
+  .home-news > .container,
+  #web-projects > .container,
+  #services > .container {
+    width: 100%;
+    max-width: var(--container);
+    margin-inline: auto;
+  }
+
+  .section-head,
+  .web-projects-header,
+  .news-hero {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: auto;
+    text-align: left;
+  }
+
+  body.page-about > main {
+    width: 100%;
+    padding-left: max(1.25rem, env(safe-area-inset-left));
+    padding-right: max(1.25rem, env(safe-area-inset-right));
+    box-sizing: border-box;
+  }
+
+  .about-content {
+    width: 100%;
+    max-width: min(700px, 100%);
+    margin-inline: auto;
+    padding: clamp(32px, 8vw, 48px) clamp(22px, 5.5vw, 36px);
+    box-sizing: border-box;
   }
 
   .wa-widget {
@@ -872,7 +934,7 @@ body {
   }
 }
 
-/* Performance — below-fold sections */
+/* Performance — below-fold sections (preserve horizontal inset) */
 #web-projects,
 #services,
 .home-news {
@@ -880,6 +942,8 @@ body {
   contain-intrinsic-size: auto 600px;
   padding-top: var(--section-y);
   padding-bottom: var(--section-y);
+  padding-left: max(1.25rem, env(safe-area-inset-left, 0px));
+  padding-right: max(1.25rem, env(safe-area-inset-right, 0px));
 }
 
 /* Inner pages — editorial rhythm */
@@ -996,9 +1060,10 @@ h1, h2, h3, h4 {
 
 /* Container alignment */
 .container {
+  width: 100%;
+  max-width: var(--container);
   margin-left: auto;
   margin-right: auto;
-  padding-inline: 0;
 }
 
 /* ——— Header & navigation ——— */
