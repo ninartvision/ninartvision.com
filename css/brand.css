@@ -214,9 +214,13 @@ html.is-loading body {
 }
 
 /* WhatsApp widget — brand-consistent sizing */
-.wa-avatar i,
-.wa-float i {
+.wa-avatar i {
   font-size: 26px;
+  line-height: 1;
+}
+
+.wa-float i {
+  font-size: 34px;
   line-height: 1;
 }
 

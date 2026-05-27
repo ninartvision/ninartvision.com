@@ -1414,13 +1414,15 @@ body.is-ready #hero .hero-inner {
 
 /* ——— WhatsApp ——— */
 .wa-float {
-  transition:
-    transform var(--duration-mid) var(--ease-luxury),
-    box-shadow var(--duration-mid) ease;
+  transition: transform var(--duration-mid) var(--ease-luxury);
 }
 
 .wa-float:hover {
-  transform: scale(1.04) !important;
+  transform: scale(1.06) !important;
+}
+
+.wa-float i {
+  transition: filter var(--duration-mid) ease;
 }
 
 .wa-popup {

@@ -1773,12 +1773,13 @@ header > nav,
 .wa-float{
   width: 60px;
   height: 60px;
-  border-radius: 50%;
-
-  background: rgba(20, 20, 20, 0.85);
-  backdrop-filter: blur(8px);
-
-  border: 1px solid rgba(214, 194, 138, 0.3);
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
 
   display: flex;
   align-items: center;
@@ -1787,23 +1788,29 @@ header > nav,
   color: #25D366; /* explicit: prevents browser UA ButtonText (black) overriding FA icon */
   cursor: pointer;
 
-  box-shadow:
-    0 10px 30px rgba(0,0,0,0.6),
-    0 0 15px rgba(214,194,138,0.15);
-
-  transition: all 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .wa-float:hover{
   transform: scale(1.08);
-  box-shadow:
-    0 15px 40px rgba(0,0,0,0.7),
-    0 0 25px rgba(214,194,138,0.35);
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 .wa-float i {
-  font-size: 28px;
+  font-size: 34px;
   color: #25D366;
+  filter:
+    drop-shadow(0 0 10px rgba(37, 211, 102, 0.28))
+    drop-shadow(0 2px 6px rgba(0, 10, 20, 0.35));
+  transition: filter 0.3s ease;
+}
+
+.wa-float:hover i {
+  filter:
+    drop-shadow(0 0 14px rgba(37, 211, 102, 0.38))
+    drop-shadow(0 2px 8px rgba(0, 10, 20, 0.3));
 }
 
 
