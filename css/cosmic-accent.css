@@ -115,3 +115,32 @@
   background: linear-gradient(90deg, var(--cosmic), var(--cosmic-line-fade), transparent) !important;
   box-shadow: 0 0 6px var(--cosmic-glow-soft);
 }
+
+/* Nav underline micro-accent */
+.nav-links a::after {
+  background: linear-gradient(90deg, var(--cosmic) 0%, var(--cosmic-light) 100%) !important;
+  box-shadow: 0 0 8px var(--cosmic-glow-soft) !important;
+  filter: none !important;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  text-shadow: 0 0 14px var(--cosmic-glow-soft) !important;
+}
+
+@media (min-width: 992px) {
+  .nav-links a.active {
+    color: var(--cosmic-light) !important;
+  }
+}
+
+/* News list hover rim */
+.news-item:hover {
+  border-color: var(--border-cosmic) !important;
+}
+
+/* style.css about underline base */
+#about h1::after {
+  background: linear-gradient(90deg, var(--cosmic-light), var(--cosmic)) !important;
+  box-shadow: 0 0 8px var(--cosmic-glow-soft) !important;
+}

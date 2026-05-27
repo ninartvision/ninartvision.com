@@ -1057,7 +1057,7 @@ header > nav {
 
   .nav-links a.active {
     opacity: 1;
-    color: var(--gold-light);
+    color: var(--cosmic-light, #a8d4ea);
   }
 }
 
