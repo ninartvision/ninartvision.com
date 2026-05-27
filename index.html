@@ -35,7 +35,8 @@
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" href="images/favicon.png" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
@@ -62,6 +63,7 @@
 
 <body>
 
+  <a href="#main-content" class="skip-link">Skip to content</a>
 
   <!-- STAR BACKGROUND (ONLY ONCE) -->
   <div id="particles-js"></div>
@@ -116,15 +118,16 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main-content">
   <!-- HERO -->
   <section id="hero" class="hero-modern">
   <div class="hero-inner hero-centered">
 
+   <p class="hero-eyebrow" data-key="hero.eyebrow">Ninart Vision</p>
 
    <h1 class="hero-title hero-stack">
 
-  <span class="line-1 purple" data-key="hero1">
+  <span class="line-1" data-key="hero1">
     ბიზნესის სრული
   </span>
 
@@ -132,9 +135,7 @@
     ციფრული მხარდაჭერა
   </span>
 
-  <span class="line-3 cyan" data-key="hero3">
-
-  </span>
+  <span class="line-3" data-key="hero3"></span>
 
   <span class="line-4" data-key="hero4">
     Digital Support
@@ -169,15 +170,15 @@
 
 
 <!-- WEB PROJECTS -->
-<section id="web-projects" class="section">
+<section id="web-projects" class="section reveal">
   <div class="container">
-    <div class="web-projects-header">
-      <p class="web-projects-label"><span class="web-projects-label-line"></span>Web Development</p>
-      <h2 class="web-projects-heading">ვებ პროექტები</h2>
-      <p class="web-projects-subtitle">თანამედროვე, სწრაფი და ვიზუალურად გამორჩეული ვებგვერდები.</p>
-      <div class="web-projects-divider"></div>
+    <div class="section-head web-projects-header">
+      <p class="section-label web-projects-label"><span class="section-label-line web-projects-label-line" aria-hidden="true"></span><span data-key="portfolio.webLabel">Web Development</span></p>
+      <h2 class="section-heading web-projects-heading">ვებ პროექტები</h2>
+      <p class="section-desc web-projects-subtitle">თანამედროვე, სწრაფი და ვიზუალურად გამორჩეული ვებგვერდები.</p>
+      <div class="section-rule web-projects-divider" aria-hidden="true"></div>
     </div>
-    <div class="projects-grid">
+    <div class="projects-grid reveal-stagger">
 
       <a href="https://ninartvision.store" class="project-card" target="_blank" rel="noopener noreferrer" aria-label="ninartvision.store">
         <figure class="project-figure">
@@ -236,15 +237,23 @@
       </a>
 
     </div>
+    <div class="section-cta">
+      <a href="portfolio.html" class="link-arrow" data-key="portfolio.viewAll">სრული პორტფოლიო</a>
+    </div>
   </div>
 </section>
 
   <!-- SERVICES -->
   <section id="services" class="section dark reveal">
   <div class="container">
-    <h2 data-key="services.title">Services</h2>
+    <div class="section-head">
+      <p class="section-label"><span class="section-label-line" aria-hidden="true"></span><span data-key="services.label">Services</span></p>
+      <h2 class="section-heading" data-key="services.title">Services</h2>
+      <p class="section-desc" data-key="services.overview">სრული ციფრული სერვისები თქვენი ბიზნესის ზრდისთვის.</p>
+      <div class="section-rule" aria-hidden="true"></div>
+    </div>
 
-   <div class="services-grid">
+   <div class="services-grid reveal-stagger">
 
   <!-- Website -->
   <a href="services/web.html" class="service-card">
@@ -280,12 +289,14 @@
 </section>
 
 <!-- NEWS SECTION -->
-<section class="home-news">
+<section class="home-news reveal">
   <div class="container">
 
-   <section class="news-hero">
-  <h2 class="news-title">სიახლეები</h2>
-</section>
+   <div class="section-head news-hero">
+  <p class="section-label"><span class="section-label-line" aria-hidden="true"></span><span data-key="news.label">News</span></p>
+  <h2 class="section-heading news-title">სიახლეები</h2>
+  <div class="section-rule" aria-hidden="true"></div>
+</div>
 
 
     <div class="news-accordion">

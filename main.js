@@ -43,7 +43,7 @@ learn_more: "Learn More",
       nav: { home: "Home", about: "About", services: "Services", portfolio: "Portfolio", contact: "Contact" },
       footer: { copyright: "© 2026 Ninart Vision. All rights reserved." },
       contactCTA: "Contact",
-      services: { title: "Services", overview: "Overview of services offered. Explore each area to learn more." },
+      services: { title: "Services", label: "What we do", overview: "End-to-end digital services to help your business grow online." },
       simple: {
         title: "Website",
         hero: "Websites for businesses or personal projects",
@@ -88,13 +88,16 @@ learn_more: "Learn More",
       }
       ,
       // extra UI keys used on the index page
-      hero: { about: "About Me", projects: "Projects", calcCTA: "Project cost" },
+      hero: { eyebrow: "Creative Studio", about: "About Me", projects: "Projects", calcCTA: "Project cost" },
       portfolio: {
         title: "Portfolio",
+        viewAll: "View full portfolio",
+        lead: "Selected projects and recent work.",
         project1: { title: "Project One", desc: "Landing page" },
         project2: { title: "Project Two", desc: "Business website" },
         project3: { title: "Project Three", desc: "Portfolio website" }
       },
+      news: { label: "Insights" },
       contact: { title: "Contact", lead: "Interested in working together? Let’s build something great." }
       ,
       calc: {
@@ -153,7 +156,7 @@ learn_more: "გაიგე მეტი",
       nav: { home: "მთავარი", about: "ჩემ შესახებ", services: "სერვისები", portfolio: "პორტფოლიო", contact: "კონტაქტი" },
       footer: { copyright: "© 2026 Ninart Vision. All rights reserved." },
       contactCTA: "კონტაქტი",
-      services: { title: "სერვისები", overview: "სერვისების მიმოხილვა. დაათვალიერეთ ყველა სფერო, რომ გაიგოთ მეტი." },
+      services: { title: "სერვისები", label: "რას ვთავაზობთ", overview: "ციფრული სერვისები, რომლებიც თქვენს ბიზნესს ონლაინ ზრდაში დაეხმარება." },
       simple: {
         title: "სრული ვებგვერდი (Simple)",
         hero: "ერთი გვერდიანი ვებგვერდები მცირე ბიზნესებისთვის ან პირადი პროექტებისთვის.",
@@ -197,9 +200,11 @@ learn_more: "გაიგე მეტი",
         cta: "დაგვიკავშირდი"
       }
       ,
-      hero: { about: "ჩემ შესახებ", projects: "პროექტები", calcCTA: "პროექტის ღირებულება" },
+      hero: { eyebrow: "Ninart Vision", about: "ჩემ შესახებ", projects: "პროექტები", calcCTA: "პროექტის ღირებულება" },
+      news: { label: "სიახლეები" },
       portfolio: {
         title: "პორტფოლიო",
+        viewAll: "სრული პორტფოლიო",
         project1: { title: "პროექტი ერთი", desc: "ლენდინგ გვერდი" },
         project2: { title: "პროექტი ორი", desc: "ბიზნეს ვებგვერდი" },
         project3: { title: "პროექტი სამი", desc: "პორტფოლიო ვებგვერდი" }
@@ -435,31 +440,29 @@ const particlesContainer = document.getElementById("particles-js");
 if (particlesContainer && typeof particlesJS !== "undefined") {
   particlesJS("particles-js", {
     particles: {
-      number: { value: 65, density: { enable: true, value_area: 1200 } },
-      color: { value: "#ffffff" },
+      number: { value: 42, density: { enable: true, value_area: 1400 } },
+      color: { value: "#d6c28a" },
       shape: { type: "circle" },
-      opacity: { value: 0.9, random: true },
-      size: { value: 3, random: true },
+      opacity: { value: 0.35, random: true },
+      size: { value: 2, random: true },
       line_linked: {
         enable: true,
-        distance: 250,
-        color: "#ffffff",
-        opacity: 0.3,
+        distance: 200,
+        color: "#C9A94F",
+        opacity: 0.12,
         width: 1
       },
-      move: { enable: true, speed: 5, random: true, out_mode: "out" }
+      move: { enable: true, speed: 1.2, random: true, out_mode: "out" }
     },
     interactivity: {
       detect_on: "window",
       events: {
-        onhover: { enable: true, mode: ["grab", "repulse"] },
-        onclick: { enable: true, mode: "push" },
+        onhover: { enable: true, mode: "grab" },
+        onclick: { enable: false },
         resize: true
       },
       modes: {
-        grab: { distance: 180, line_linked: { opacity: 0.6 } },
-        repulse: { distance: 160 },
-        push: { particles_nb: 4 }
+        grab: { distance: 140, line_linked: { opacity: 0.25 } }
       }
     },
     retina_detect: true
@@ -473,11 +476,73 @@ if (particlesContainer && typeof particlesJS !== "undefined") {
   const navLinks = document.querySelector(".nav-links");
 
   if (hamburger && navLinks) {
+    function setMobileMenu(open) {
+      navLinks.classList.toggle("open", open);
+      hamburger.classList.toggle("open", open);
+      hamburger.setAttribute("aria-expanded", open ? "true" : "false");
+      document.body.classList.toggle("menu-open", open);
+    }
+
     hamburger.addEventListener("click", () => {
-      const isOpen = navLinks.classList.toggle("open");
-      // update aria-expanded on the button for accessibility
-      hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      setMobileMenu(!navLinks.classList.contains("open"));
     });
+
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => setMobileMenu(false));
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && navLinks.classList.contains("open")) {
+        setMobileMenu(false);
+      }
+    });
+  }
+
+  const siteHeader = document.querySelector("header");
+
+  /* ================= SCROLL REVEAL ================= */
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const revealTargets = document.querySelectorAll(
+    ".reveal, .reveal-stagger, .section-head, .web-projects-header"
+  );
+
+  function markVisible(el) {
+    el.classList.add("is-visible");
+    el.querySelectorAll(".section-head, .web-projects-header").forEach((head) => {
+      head.classList.add("is-visible");
+    });
+  }
+
+  if (!prefersReducedMotion && revealTargets.length && "IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            markVisible(entry.target);
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.06, rootMargin: "0px 0px -40px 0px" }
+    );
+    revealTargets.forEach((el) => revealObserver.observe(el));
+  } else {
+    revealTargets.forEach((el) => markVisible(el));
+  }
+
+  /* ================= HEADER SCROLL (throttled) ================= */
+  if (siteHeader) {
+    let scrollTicking = false;
+    const onHeaderScrollThrottled = () => {
+      if (scrollTicking) return;
+      scrollTicking = true;
+      requestAnimationFrame(() => {
+        siteHeader.classList.toggle("is-scrolled", window.scrollY > 16);
+        scrollTicking = false;
+      });
+    };
+    window.addEventListener("scroll", onHeaderScrollThrottled, { passive: true });
+    onHeaderScrollThrottled();
   }
 
   /* ================= LANGUAGE SWITCH ================= */

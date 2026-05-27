@@ -5,7 +5,7 @@
     "logo": { "alt": "Ninart Vision logo" },
     "icon": { "about": "About Me", "projects": "Projects" },
     "contactCTA": "Get in Touch",
-    "services": { "title": "", "overview": "End-to-end digital services to help your business grow online." },
+    "services": { "title": "Services", "label": "What we do", "overview": "End-to-end digital services to help your business grow online." },
     "simple": {
       "title": "Web Development",
       "hero": "Custom websites for businesses and personal projects",
@@ -69,17 +69,21 @@
     "aboutEnd": "Every project I deliver is strategically planned, visually refined and technically flawless.",
     "portfolio": {
       "title": "Portfolio",
+      "label": "Work",
       "lead": "Selected projects and recent work.",
+      "viewAll": "View full portfolio",
+      "webLabel": "Web Development",
       "project1": { "title": "Project One", "desc": "Landing page" },
       "project2": { "title": "Project Two", "desc": "Business website" },
       "project3": { "title": "Project Three", "desc": "Portfolio website" }
     },
+    "news": { "label": "Insights" },
     "hero1": "Full Digital",
     "hero2": "Support",
     "hero3": "for Your",
     "hero4": "Business",
     "heroText": "Modern digital solutions — no monthly platform fees.",
-    "hero": { "about": "About Me", "projects": "Projects", "calcCTA": "Estimate Cost" },
+    "hero": { "eyebrow": "Creative Studio", "about": "About Me", "projects": "Projects", "calcCTA": "Estimate Cost" },
     "calc": {
       "title": "Estimate your project cost",
       "step1": "Select project type",
@@ -98,7 +102,7 @@
     "logo": { "alt": "Ninart Vision ლოგო" },
     "icon": { "about": "ჩემ შესახებ", "projects": "პროექტები" },
     "contactCTA": "დაგვიკავშირდი",
-    "services": { "title": "", "overview": "ციფრული სერვისები, რომლებიც თქვენს ბიზნესს ონლაინ ზრდაში დაეხმარება." },
+    "services": { "title": "სერვისები", "label": "რას ვთავაზობთ", "overview": "ციფრული სერვისები, რომლებიც თქვენს ბიზნესს ონლაინ ზრდაში დაეხმარება." },
     "simple": {
       "title": "ვებგვერდი",
       "hero": "პროფესიონალური ვებგვერდები ბიზნესისა და პირადი პროექტებისთვის",
@@ -164,7 +168,10 @@
     "aboutEnd": "ჩემი მიზანია თითოეული პროექტი იყოს სტრატეგიულად დაგეგმილი, ვიზუალურად მიმზიდველი და ტექნიკურად სრულყოფილი.",
     "portfolio": {
       "title": "პორტფოლიო",
+      "label": "ნამუშევრები",
       "lead": "არჩეული პროექტები და ბოლო ნამუშევრები.",
+      "viewAll": "სრული პორტფოლიო",
+      "webLabel": "ვებ დეველოპმენტი",
       "project1": { "title": "პროექტი ერთი", "desc": "ლენდინგ გვერდი" },
       "project2": { "title": "პროექტი ორი", "desc": "ბიზნეს ვებგვერდი" },
       "project3": { "title": "პროექტი სამი", "desc": "პორტფოლიო ვებგვერდი" }
@@ -174,7 +181,8 @@
     "hero3": "",
     "hero4": "Digital Support",
     "heroText": "თანამედროვე ციფრული გადაწყვეტილებები — ყოველთვიური გადასახადის გარეშე.",
-    "hero": { "about": "ჩემ შესახებ", "projects": "პროექტები", "calcCTA": "პროექტის ღირებულება" },
+    "hero": { "eyebrow": "Ninart Vision", "about": "ჩემ შესახებ", "projects": "პროექტები", "calcCTA": "პროექტის ღირებულება" },
+    "news": { "label": "სიახლეები" },
     "calc": {
       "title": "გამოთვალე პროექტის ღირებულება",
       "step1": "აირჩიე პროექტის ტიპი",

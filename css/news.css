@@ -6,9 +6,9 @@
 
 body {
   margin: 0;
-  background: #0f0f12;
-  color: #eaeaea;
-  font-family: 'Segoe UI', sans-serif;
+  background: #000;
+  color: var(--text-primary, #F8F6F2);
+  font-family: "BPG", system-ui, -apple-system, sans-serif;
 }
 
 /* ===== Section ===== */
