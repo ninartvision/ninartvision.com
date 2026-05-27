@@ -43,22 +43,21 @@ body {
   overflow: hidden;
   padding: clamp(22px, 4vw, 30px);
   margin-bottom: 16px;
-  background: rgba(10, 14, 24, 0.42);
-  backdrop-filter: blur(16px) saturate(140%);
-  -webkit-backdrop-filter: blur(16px) saturate(140%);
-  border: 1px solid rgba(120, 180, 255, 0.2) !important;
+  background: rgba(12, 16, 28, 0.42);
+  backdrop-filter: blur(14px) saturate(135%);
+  -webkit-backdrop-filter: blur(14px) saturate(135%);
+  border: 1px solid rgba(120, 180, 255, 0.16) !important;
   border-radius: 18px;
   text-decoration: none;
   box-shadow:
-    0 8px 24px rgba(0, 0, 0, 0.4),
-    0 0 30px rgba(0, 180, 255, 0.26),
-    0 0 70px rgba(0, 140, 255, 0.16),
-    0 0 140px rgba(0, 110, 255, 0.1) !important;
+    0 10px 26px rgba(0, 0, 0, 0.42),
+    0 0 18px rgba(0, 170, 255, 0.16),
+    0 0 40px rgba(0, 140, 255, 0.1),
+    0 0 80px rgba(0, 110, 255, 0.05) !important;
   transition:
     transform 0.28s ease,
     border-color 0.28s ease,
     box-shadow 0.28s ease;
-  animation: servicesCosmicAura 5.8s ease-in-out infinite;
 }
 
 .blog-section .news-item::before {
@@ -68,14 +67,19 @@ body {
   border-radius: inherit;
   pointer-events: none;
   z-index: 0;
-  background: linear-gradient(
-    140deg,
-    rgba(175, 225, 255, 0.14) 0%,
-    rgba(140, 195, 240, 0.06) 24%,
-    rgba(90, 155, 220, 0.02) 50%,
-    transparent 74%
-  );
-  opacity: 0.62;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.07) 0%,
+      rgba(255, 255, 255, 0.02) 26%,
+      transparent 62%
+    ),
+    radial-gradient(
+      ellipse 120% 70% at 50% 0%,
+      rgba(140, 205, 255, 0.06) 0%,
+      transparent 62%
+    );
+  opacity: 0.55;
 }
 
 .blog-section .news-item::after {
@@ -88,26 +92,26 @@ body {
   background: linear-gradient(
     115deg,
     transparent 10%,
-    rgba(120, 205, 255, 0.08) 22%,
-    rgba(160, 225, 255, 0.22) 35%,
-    rgba(120, 205, 255, 0.08) 48%,
+    rgba(120, 205, 255, 0.06) 22%,
+    rgba(160, 225, 255, 0.14) 35%,
+    rgba(120, 205, 255, 0.06) 48%,
     transparent 62%
   );
   mix-blend-mode: screen;
-  opacity: 0.38;
+  opacity: 0.22;
   transform: translateX(-24%);
   animation: servicesCosmicShimmer 7s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
 .blog-section .news-item:hover {
-  transform: translateY(-4px) !important;
-  background: rgba(10, 14, 24, 0.48);
-  border-color: rgba(145, 205, 250, 0.34) !important;
+  transform: translateY(-2px) !important;
+  background: rgba(12, 16, 28, 0.48);
+  border-color: rgba(145, 205, 250, 0.24) !important;
   box-shadow:
-    0 20px 44px rgba(0, 0, 0, 0.5),
-    0 0 34px rgba(0, 180, 255, 0.32),
-    0 0 76px rgba(0, 140, 255, 0.2),
-    0 0 148px rgba(0, 110, 255, 0.12) !important;
+    0 14px 34px rgba(0, 0, 0, 0.46),
+    0 0 22px rgba(0, 170, 255, 0.18),
+    0 0 46px rgba(0, 140, 255, 0.12),
+    0 0 86px rgba(0, 110, 255, 0.06) !important;
 }
 
 .blog-section .news-date,
@@ -164,12 +168,11 @@ body {
   .blog-section .news-item {
     flex-direction: column;
     align-items: flex-start;
-    animation-duration: 7.2s;
   }
 
   .blog-section .news-item::after {
     animation-duration: 9s;
-    opacity: 0.3;
+    opacity: 0.18;
   }
 
   .news-date {
@@ -189,7 +192,7 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   .blog-section .news-item {
-    animation: none;
+    /* no pulsing shadows on News cards */
   }
 
   .blog-section .news-item::after {
