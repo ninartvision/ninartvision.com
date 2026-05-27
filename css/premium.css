@@ -422,7 +422,10 @@ body.menu-open {
 
 /* ——— Calculator ——— */
 .calc-title {
-  color: var(--gold-light) !important;
+  color: #74aecd !important;
+  text-shadow:
+    0 0 10px rgba(95, 165, 205, 0.24),
+    0 0 20px rgba(60, 125, 175, 0.14);
 }
 
 .btn.primary {
