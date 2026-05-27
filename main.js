@@ -419,6 +419,20 @@ learn_more: "გაიგე მეტი",
     try { localStorage.setItem('lang', normalized); } catch (e) {}
   }
 
+  function syncLangToggleFromItem(item, toggleBtn) {
+    if (!item || !toggleBtn) return;
+    const code = (item.dataset.lang || "ka").split("-")[0].toLowerCase();
+    const label = code === "en" ? "EN" : "KA";
+    const menuImg = item.querySelector("img");
+    const flagSrc = menuImg ? menuImg.getAttribute("src") : "";
+    toggleBtn.innerHTML =
+      (flagSrc
+        ? '<img src="' + flagSrc + '" alt="" aria-hidden="true" class="lang-flag" decoding="async">'
+        : "") +
+      '<span class="lang-text">' + label + "</span>" +
+      '<span class="arrow">▾</span>';
+  }
+
   // Try to load translations.json to override defaults (optional)
   fetch('/translations.json')
 
@@ -433,9 +447,8 @@ learn_more: "გაიგე მეტი",
       const savedItem = document.querySelector(`#langMenu [data-lang="${savedCode}"]`);
       const langToggleBtn = document.getElementById("langToggle");
       if (savedItem) savedItem.classList.add("active");
-      if (langToggleBtn) {
-        const textEl = langToggleBtn.querySelector(".lang-text");
-        if (textEl) textEl.textContent = savedCode === "en" ? "EN" : "KA";
+      if (langToggleBtn && savedItem) {
+        syncLangToggleFromItem(savedItem, langToggleBtn);
       }
 
       // Dev-only runtime check: report whether `heroText` came from fetched JSON or defaults
@@ -619,7 +632,7 @@ if (particlesContainer && typeof particlesJS !== "undefined") {
 
         
 
-        updateLangToggleLabel(lang);
+        syncLangToggleFromItem(item, langToggle);
 
         langMenu.querySelectorAll("[data-lang]")
           .forEach(el => el.classList.remove("active"));
@@ -630,22 +643,17 @@ if (particlesContainer && typeof particlesJS !== "undefined") {
       });
     });
 
-    function updateLangToggleLabel(lang) {
-      const code = (lang || "ka").split("-")[0].toLowerCase();
-      const label = code === "en" ? "EN" : "KA";
-      const textEl = langToggle.querySelector(".lang-text");
-      if (textEl) textEl.textContent = label;
-    }
-
     /* Restore saved language */
     const saved = localStorage.getItem("lang") || "ka";
 
     switchLanguage(saved);
-    updateLangToggleLabel(saved);
 
     const savedCode = (saved || "ka").split("-")[0].toLowerCase();
     const savedItem = langMenu.querySelector(`[data-lang="${savedCode}"]`);
-    if (savedItem) savedItem.classList.add("active");
+    if (savedItem) {
+      syncLangToggleFromItem(savedItem, langToggle);
+      savedItem.classList.add("active");
+    }
   }
 
   /* ================= ACTIVE NAV LINK ================= */

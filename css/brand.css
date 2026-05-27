@@ -142,39 +142,20 @@ html.is-loading body {
   display: block;
 }
 
-/* ——— Language switcher (branded icon.webp) ——— */
-.lang-brand-icon,
+/* ——— Language switcher flags (georgia.webp / america.webp) ——— */
+.lang-flag,
 .lang-current img,
 .lang-menu li img {
-  width: 20px;
-  height: 20px;
-  object-fit: contain;
-  object-position: center;
   flex-shrink: 0;
   display: block;
-  border-radius: 0;
-  opacity: 0.92;
-  filter: drop-shadow(0 0 6px rgba(201, 169, 79, 0.15));
-  transition: opacity 0.25s ease, filter 0.25s ease;
+  object-position: center;
   -webkit-user-drag: none;
   user-select: none;
-}
-
-.lang-menu li img {
-  width: 18px;
-  height: 18px;
 }
 
 .lang-current {
   gap: 10px;
   align-items: center;
-}
-
-.lang-current:hover img,
-.lang-current:focus-visible img,
-.lang-menu li:hover img {
-  opacity: 1;
-  filter: drop-shadow(0 0 8px rgba(201, 169, 79, 0.28));
 }
 
 .lang-menu li {

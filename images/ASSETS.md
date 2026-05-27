@@ -27,7 +27,7 @@ Use **only** files in this folder. Do not mix Font Awesome or legacy PNG paths f
 
 ## Language switcher
 
-`icon.webp` — branded mark in the language pill and menu (KA / EN labels distinguish languages).
+`georgia.webp` — Georgian flag (KA). `america.webp` — US flag (EN). Used in the nav language pill and dropdown.
 
 ## Portfolio
 

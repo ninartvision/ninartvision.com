@@ -197,8 +197,8 @@ header > nav {
 .lang-current img {
   width: 20px;
   height: 20px;
-  object-fit: contain;
-  border-radius: 0;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .lang-text {
@@ -248,8 +248,8 @@ header > nav {
 .lang-menu li img {
   width: 18px;
   height: 18px;
-  object-fit: contain;
-  border-radius: 0;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .lang-menu li:hover {
