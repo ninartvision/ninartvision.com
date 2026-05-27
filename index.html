@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+  <link rel="icon" href="images/favicon.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="images/logo.webp" type="image/webp" sizes="any">
+  <link rel="apple-touch-icon" href="images/favicon.png" />
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RGCMJPS7G3"></script>
 <script>
@@ -29,12 +32,12 @@
   <meta property="og:description" content="თანამედროვე ვებგვერდები, SEO ოპტიმიზაცია, ვიდეო მონტაჟი და სრული ციფრული მხარდაჭერა ბიზნესებისთვის.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ninartvision.com/">
-  <meta property="og:image" content="https://ninartvision.com/images/og-image.png">
+  <meta property="og:image" content="https://ninartvision.com/images/logo.webp">
   <meta property="og:locale" content="ka_GE">
 
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="images/favicon.png" />
+  <link rel="apple-touch-icon" href="images/favicon.png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
 
@@ -42,7 +45,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="ვებგვერდის შექმნა, SEO ოპტიმიზაცია და ვიდეო მონტაჟი — Ninart Vision">
   <meta name="twitter:description" content="თანამედროვე ვებგვერდები, SEO ოპტიმიზაცია, ვიდეო მონტაჟი და სრული ციფრული მხარდაძერა ბიზნესებისთვის.">
-  <meta name="twitter:image" content="https://ninartvision.com/images/og-image.png">
+  <meta name="twitter:image" content="https://ninartvision.com/images/logo.webp">
 
   <script type="application/ld+json">
   {
@@ -72,7 +75,7 @@
   <header>
     <nav>
       <a href="/" class="logo" aria-label="Home">
-  <img src="images/logo.webp" alt="Ninart Vision logo" data-alt-key="logo.alt" width="120" height="40">
+  <img src="images/logo.webp" alt="" data-alt-key="logo.alt" class="brand-logo" width="132" height="36" decoding="async">
 </a>
 
 <ul id="navLinks" class="nav-links">
@@ -89,18 +92,18 @@
       <div class="nav-controls">
         <div class="lang-dropdown">
   <button class="lang-current" id="langToggle">
-    <img src="images/georgia.webp" alt="" aria-hidden="true">
+    <img src="images/icon.webp" alt="" aria-hidden="true" class="lang-brand-icon" decoding="async">
     <span class="lang-text">KA</span>
     <span class="arrow">▾</span>
   </button>
 
         <ul class="lang-menu" id="langMenu" role="menu" aria-label="Language menu">
       <li data-lang="ka" role="menuitem">
-      <img src="images/georgia.webp" alt="" aria-hidden="true">
+      <img src="images/icon.webp" alt="" aria-hidden="true" class="lang-brand-icon" decoding="async">
       KA
     </li>
     <li data-lang="en" role="menuitem">
-      <img src="images/america.webp" alt="" aria-hidden="true">
+      <img src="images/icon.webp" alt="" aria-hidden="true" class="lang-brand-icon" decoding="async">
       EN
     </li>
   </ul>
@@ -150,18 +153,18 @@
   <div class="hero-buttons">
   <a href="about.html" class="hero-link primary">
 
-    <img src="images/icon1.webp" alt="About Me" class="hero-icon" data-alt-key="icon.about" width="22" height="22">
+    <img src="images/icon1.webp" alt="" class="hero-icon brand-icon--hero" data-alt-key="icon.about" width="20" height="20" decoding="async">
     <span data-key="hero.about">About Me</span>
   </a>
 
   <a href="portfolio.html" class="hero-link secondary">
-    <img src="images/icon.webp" alt="Projects" class="hero-icon" data-alt-key="icon.projects" width="22" height="22">
+    <img src="images/icon.webp" alt="" class="hero-icon brand-icon--hero" data-alt-key="icon.projects" width="20" height="20" decoding="async">
     <span data-key="hero.projects">Projects</span>
   </a>
   
     <button class="hero-link tertiary calc-open" id="openCalculator" data-aria-key="calc.open" aria-label="გამოითვალე პროექტის ღირებულება">
       <span class="hero-btn-text" data-key="hero.calcCTA">პროექტის ღირებულება</span>
-      <span class="hero-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
+      <span class="hero-arrow icon-arrow" aria-hidden="true"></span>
     </button>
 </div>
 
@@ -257,7 +260,7 @@
 
   <!-- Website -->
   <a href="services/web.html" class="service-card">
-    <img src="images/icons/website.webp" class="service-icon" alt="Website" width="48" height="48" loading="lazy">
+    <img src="images/icons/website.webp" class="service-icon brand-icon--service" alt="" data-alt-key="icons.website" width="52" height="52" loading="lazy" decoding="async">
     <h3 data-key="simple.title">ვებგვერდი</h3>
     <p data-key="simple.description">
       ინდივიდუალურად შექმნილი ვებგვერდები თქვენი ბიზნესის მიზნებისთვის.
@@ -266,7 +269,7 @@
 
   <!-- SEO -->
   <a href="services/seo.html" class="service-card">
-    <img src="images/icons/seo.webp" class="service-icon" alt="SEO" width="48" height="48" loading="lazy">
+    <img src="images/icons/seo.webp" class="service-icon brand-icon--service" alt="" data-alt-key="icons.seo" width="52" height="52" loading="lazy" decoding="async">
     <h3 data-key="medium.title">SEO ოპტიმიზაცია</h3>
     <p data-key="medium.description">
       მონაცემებზე დაფუძნებული SEO სტრატეგია ონლაინ ხილვადობის გასაზრდელად.
@@ -275,7 +278,7 @@
 
   <!-- Video -->
   <a href="services/videoediting.html" class="service-card">
-    <img src="images/icons/video.webp" class="service-icon" alt="Video" width="48" height="48" loading="lazy">
+    <img src="images/icons/video.webp" class="service-icon brand-icon--service" alt="" data-alt-key="icons.video" width="52" height="52" loading="lazy" decoding="async">
     <h3 data-key="advanced.title">ვიდეო მონტაჟი</h3>
     <p data-key="advanced.description">
       მაღალი ხარისხის ვიდეო მონტაჟი სოციალური მედიის, რეკლამისა და პრეზენტაციებისთვის.
@@ -308,7 +311,7 @@
             <span>24 / 01 / 2026</span>
             <h3>რატომ ჯობია ხელით დაწერილი კოდი შაბლონს?</h3>
           </div>
-          <span class="news-icon">⌄</span>
+          <span class="news-icon icon-chevron" aria-hidden="true"></span>
         </button>
         <div class="news-content">
           <p>
@@ -334,7 +337,7 @@
             <span>04 / 12 / 2025</span>
             <h3>რატომ არის თანამედროვე ვებგვერდი ბიზნესისთვის აუცილებელი?</h3>
           </div>
-          <span class="news-icon">⌄</span>
+          <span class="news-icon icon-chevron" aria-hidden="true"></span>
         </button>
         <div class="news-content">
           <p>
@@ -358,11 +361,7 @@
             <span>02 / 10 / 2025</span>
             <h3>როგორ ზრდის SEO ოპტიმიზაცია თქვენი ვებგვერდის ვიზიტორებს?</h3>
           </div>
-          <span class="news-icon">
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-    <path d="M8 10l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
-</span>
+          <span class="news-icon icon-chevron" aria-hidden="true"></span>
 
         </button>
         <div class="news-content">
@@ -394,6 +393,11 @@
 <footer class="footer">
   <div class="footer-bg-image"></div>
 
+  <div class="footer-brand">
+    <a href="index.html" class="footer-logo" aria-label="Ninart Vision — მთავარი">
+      <img src="images/logo.webp" alt="" class="brand-logo brand-logo--footer" data-alt-key="logo.alt" width="160" height="44" decoding="async">
+    </a>
+  </div>
   <div class="container">
     <p>© 2026 Ninart Vision. ყველა უფლება დაცულია.</p>
   </div>

@@ -1,0 +1,259 @@
+/* ============================================================
+   Ninart Vision — Brand assets (logos, icons, flags)
+   Source of truth: /images/
+   ============================================================ */
+
+/* ——— Official logo (images/logo.webp) ——— */
+.logo,
+.footer-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  line-height: 0;
+  background: transparent;
+}
+
+.logo img,
+.brand-logo {
+  height: 36px;
+  width: auto;
+  max-width: 148px;
+  object-fit: contain;
+  object-position: left center;
+  display: block;
+  background: transparent;
+  border: 0;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.brand-logo--footer {
+  height: 40px;
+  max-width: 168px;
+  margin: 0 auto;
+  opacity: 0.94;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.footer-logo:hover .brand-logo--footer,
+.footer-logo:focus-visible .brand-logo--footer {
+  opacity: 1;
+  filter: drop-shadow(0 0 12px rgba(201, 169, 79, 0.22));
+}
+
+.footer-brand {
+  display: flex;
+  justify-content: center;
+  padding: 0 1.25rem 1.25rem;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-brand + .container,
+.footer-brand + .footer-bg-image + .container {
+  padding-top: 0;
+}
+
+/* Loading screen */
+.site-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(ellipse at center, #0c0b0f 0%, #050508 72%);
+  transition: opacity 0.5s var(--ease-out, ease), visibility 0.5s var(--ease-out, ease);
+}
+
+.site-loader.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+html.is-loading body {
+  overflow: hidden;
+}
+
+.brand-logo--loader {
+  height: 48px;
+  max-width: 188px;
+  width: auto;
+  object-fit: contain;
+  animation: brandLoaderIn 0.75s var(--ease-out, cubic-bezier(0.22, 1, 0.36, 1)) both;
+}
+
+@keyframes brandLoaderIn {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .logo img,
+  .brand-logo:not(.brand-logo--footer):not(.brand-logo--loader) {
+    height: 32px;
+    max-width: 128px;
+  }
+
+  .brand-logo--footer {
+    height: 34px;
+    max-width: 140px;
+  }
+
+  .brand-logo--loader {
+    height: 42px;
+    max-width: 160px;
+  }
+}
+
+/* ——— Hero CTA icons (images/icon1.webp, images/icon.webp) ——— */
+.hero-icon,
+.brand-icon--hero {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
+  opacity: 0.92;
+}
+
+/* ——— Homepage service teasers (images/icons/*.webp) ——— */
+.service-icon,
+.brand-icon--service {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  margin: 0 auto 1.25rem;
+  display: block;
+  opacity: 0.95;
+}
+
+/* ——— Services page card art (images/services/servicesN.webp) ——— */
+.services-blog .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ——— Language switcher (branded icon.webp) ——— */
+.lang-brand-icon,
+.lang-current img,
+.lang-menu li img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  object-position: center;
+  flex-shrink: 0;
+  display: block;
+  border-radius: 0;
+  opacity: 0.92;
+  filter: drop-shadow(0 0 6px rgba(201, 169, 79, 0.15));
+  transition: opacity 0.25s ease, filter 0.25s ease;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.lang-menu li img {
+  width: 18px;
+  height: 18px;
+}
+
+.lang-current {
+  gap: 10px;
+  align-items: center;
+}
+
+.lang-current:hover img,
+.lang-current:focus-visible img,
+.lang-menu li:hover img {
+  opacity: 1;
+  filter: drop-shadow(0 0 8px rgba(201, 169, 79, 0.28));
+}
+
+.lang-menu li {
+  gap: 10px;
+  align-items: center;
+}
+
+/* ——— UI chevron (replaces mixed ⌄ / SVG / Font Awesome) ——— */
+.icon-chevron {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: var(--gold, #C9A94F);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.icon-chevron::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg) translateY(-2px);
+}
+
+.news-header[aria-expanded="true"] .icon-chevron,
+.news-item.is-open .icon-chevron {
+  transform: rotate(180deg);
+}
+
+/* Hero / CTA arrow (no Font Awesome) */
+.icon-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  color: inherit;
+}
+
+.icon-arrow::before {
+  content: "→";
+  font-size: 1rem;
+  line-height: 1;
+  font-weight: 400;
+}
+
+/* ——— Social: keep Font Awesome but unify size ——— */
+.social-links a i,
+.social-icons a i {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* WhatsApp widget — brand-consistent sizing */
+.wa-avatar i,
+.wa-float i {
+  font-size: 26px;
+  line-height: 1;
+}
+
+/* ——— Footer atmosphere (images/earth.webp) ——— */
+.footer-brand-glow {
+  /* applied via .footer-bg-image in style.css */
+}
+
+/* ——— Portfolio / project imagery ——— */
+.project-figure img,
+.wp-figure img,
+.projects-grid img {
+  object-fit: cover;
+}
+
+/* Coming soon hero */
+.page-hero--soon {
+  background-image: url("../images/comingsoon.webp");
+  background-size: cover;
+  background-position: center;
+}

@@ -1,4 +1,42 @@
+/* ——— Branded loading screen (images/logo.webp) ——— */
+(function initSiteLoader() {
+  const navLogo = document.querySelector("header .brand-logo, header .logo img");
+  const src = navLogo && navLogo.getAttribute("src");
+  if (!src) return;
+
+  const loader = document.createElement("div");
+  loader.className = "site-loader";
+  loader.setAttribute("aria-hidden", "true");
+  loader.innerHTML =
+    '<img src="' +
+    src +
+    '" alt="" class="brand-logo brand-logo--loader" width="180" height="50" decoding="async">';
+
+  document.documentElement.classList.add("is-loading");
+  document.body.insertBefore(loader, document.body.firstChild);
+
+  let done = false;
+  function hideLoader() {
+    if (done) return;
+    done = true;
+    loader.classList.add("is-hidden");
+    document.documentElement.classList.remove("is-loading");
+    window.setTimeout(function () {
+      if (loader.parentNode) loader.parentNode.removeChild(loader);
+    }, 520);
+  }
+
+  window.addEventListener("load", function () {
+    window.setTimeout(hideLoader, 320);
+  }, { once: true });
+  window.setTimeout(hideLoader, 2400);
+})();
+
 document.addEventListener("DOMContentLoaded", () => {
+
+  requestAnimationFrame(() => {
+    document.body.classList.add("is-ready");
+  });
 
   // No navigation interception for menu links. Let browser handle navigation normally.
 
@@ -391,11 +429,13 @@ learn_more: "გაიგე მეტი",
       const saved = localStorage.getItem("lang") || "ka";
       // apply saved language now that we have translations
       switchLanguage(saved);
-      const savedItem = document.querySelector(`#langMenu [data-lang="${saved}"]`);
-      const langToggleBtn = document.getElementById('langToggle');
-      if (savedItem && langToggleBtn) {
-        langToggleBtn.innerHTML = savedItem.innerHTML + '<span class="arrow">▾</span>';
-        savedItem.classList.add('active');
+      const savedCode = (saved || "ka").split("-")[0].toLowerCase();
+      const savedItem = document.querySelector(`#langMenu [data-lang="${savedCode}"]`);
+      const langToggleBtn = document.getElementById("langToggle");
+      if (savedItem) savedItem.classList.add("active");
+      if (langToggleBtn) {
+        const textEl = langToggleBtn.querySelector(".lang-text");
+        if (textEl) textEl.textContent = savedCode === "en" ? "EN" : "KA";
       }
 
       // Dev-only runtime check: report whether `heroText` came from fetched JSON or defaults
@@ -523,7 +563,7 @@ if (particlesContainer && typeof particlesJS !== "undefined") {
           }
         });
       },
-      { threshold: 0.06, rootMargin: "0px 0px -40px 0px" }
+      { threshold: 0.08, rootMargin: "0px 0px -32px 0px" }
     );
     revealTargets.forEach((el) => revealObserver.observe(el));
   } else {
@@ -577,11 +617,8 @@ if (particlesContainer && typeof particlesJS !== "undefined") {
 
         
 
-        // Update button label
-        langToggle.innerHTML =
-          item.innerHTML + '<span class="arrow">▾</span>';
+        updateLangToggleLabel(lang);
 
-        // Active state
         langMenu.querySelectorAll("[data-lang]")
           .forEach(el => el.classList.remove("active"));
         item.classList.add("active");
@@ -591,17 +628,22 @@ if (particlesContainer && typeof particlesJS !== "undefined") {
       });
     });
 
+    function updateLangToggleLabel(lang) {
+      const code = (lang || "ka").split("-")[0].toLowerCase();
+      const label = code === "en" ? "EN" : "KA";
+      const textEl = langToggle.querySelector(".lang-text");
+      if (textEl) textEl.textContent = label;
+    }
+
     /* Restore saved language */
     const saved = localStorage.getItem("lang") || "ka";
 
     switchLanguage(saved);
+    updateLangToggleLabel(saved);
 
-    const savedItem = langMenu.querySelector(`[data-lang="${saved}"]`);
-    if (savedItem) {
-      langToggle.innerHTML =
-        savedItem.innerHTML + '<span class="arrow">▾</span>';
-      savedItem.classList.add("active");
-    }
+    const savedCode = (saved || "ka").split("-")[0].toLowerCase();
+    const savedItem = langMenu.querySelector(`[data-lang="${savedCode}"]`);
+    if (savedItem) savedItem.classList.add("active");
   }
 
   /* ================= ACTIVE NAV LINK ================= */
@@ -859,18 +901,24 @@ if (particlesContainer && typeof particlesJS !== "undefined") {
 
   /* ================= NEWS ACCORDION ================= */
 
-  document.querySelectorAll(".news-header").forEach(btn => {
+  document.querySelectorAll(".news-header").forEach((btn) => {
     btn.addEventListener("click", () => {
+      const item = btn.closest(".news-item");
       const content = btn.nextElementSibling;
-      const icon = btn.querySelector(".news-icon");
-      const isOpen = content.style.maxHeight;
+      const isOpen = item && item.classList.contains("is-open");
 
-      document.querySelectorAll(".news-content").forEach(el => el.style.maxHeight = null);
-      document.querySelectorAll(".news-icon").forEach(i => i.style.transform = "rotate(0deg)");
+      document.querySelectorAll(".news-item").forEach((el) => {
+        el.classList.remove("is-open");
+        const c = el.querySelector(".news-content");
+        const h = el.querySelector(".news-header");
+        if (c) c.style.maxHeight = null;
+        if (h) h.setAttribute("aria-expanded", "false");
+      });
 
-      if (!isOpen) {
+      if (!isOpen && content && item) {
+        item.classList.add("is-open");
         content.style.maxHeight = content.scrollHeight + "px";
-        icon.style.transform = "rotate(180deg)";
+        btn.setAttribute("aria-expanded", "true");
       }
     });
   });

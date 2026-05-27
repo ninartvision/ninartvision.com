@@ -4,6 +4,7 @@
     "footer": { "copyright": "© 2026 Ninart Vision. All rights reserved." },
     "logo": { "alt": "Ninart Vision logo" },
     "icon": { "about": "About Me", "projects": "Projects" },
+    "icons": { "website": "Website", "seo": "SEO", "video": "Video editing" },
     "contactCTA": "Get in Touch",
     "services": { "title": "Services", "label": "What we do", "overview": "End-to-end digital services to help your business grow online." },
     "simple": {
@@ -101,6 +102,7 @@
     "footer": { "copyright": "© 2026 Ninart Vision. ყველა უფლება დაცულია." },
     "logo": { "alt": "Ninart Vision ლოგო" },
     "icon": { "about": "ჩემ შესახებ", "projects": "პროექტები" },
+    "icons": { "website": "ვებგვერდი", "seo": "SEO", "video": "ვიდეო მონტაჟი" },
     "contactCTA": "დაგვიკავშირდი",
     "services": { "title": "სერვისები", "label": "რას ვთავაზობთ", "overview": "ციფრული სერვისები, რომლებიც თქვენს ბიზნესს ონლაინ ზრდაში დაეხმარება." },
     "simple": {

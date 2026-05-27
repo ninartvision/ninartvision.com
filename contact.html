@@ -3,17 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/favicon.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="images/logo.webp" type="image/webp" sizes="any">
+  <link rel="apple-touch-icon" href="images/favicon.png">
   <title>კონტაქტი — Ninart Vision</title>
   <link rel="canonical" href="https://ninartvision.com/contact.html">
 
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/png" href="images/favicon.png">
-
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="კონტაქტი — Ninart Vision">
   <meta name="twitter:description" content="დაგვიკავშირდეთ Ninart Vision-ს — ვებგვერდის შექმნა, SEO, ვიდეო მონტაჟი და ციფრული მხარდაძერა.">
-  <meta name="twitter:image" content="https://ninartvision.com/images/og-image.png">
+  <meta property="og:image" content="https://ninartvision.com/images/logo.webp">
+  <meta name="twitter:image" content="https://ninartvision.com/images/logo.webp">
 
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="stylesheet"
@@ -52,7 +54,7 @@
 
   <header>
     <nav>
-      <a href="index.html" class="logo" aria-label="Ninart Vision — მთავარი"><img src="images/logo.webp" alt="Ninart Vision logo" data-alt-key="logo.alt" width="120" height="40"></a>
+      <a href="index.html" class="logo" aria-label="Ninart Vision — მთავარი"><img src="images/logo.webp" alt="" data-alt-key="logo.alt" class="brand-logo" width="132" height="36" decoding="async"></a>
       <ul id="navLinks" class="nav-links">
         <li><a href="index.html"><span data-key="nav.home">მთავარი</span></a></li>
         <li><a href="about.html"><span data-key="nav.about">ჩემ შესახებ</span></a></li>
@@ -64,13 +66,13 @@
       <div class="nav-controls">
         <div class="lang-dropdown">
           <button class="lang-current" id="langToggle">
-            <img src="images/georgia.webp" alt="GE">
+            <img src="images/icon.webp" alt="" aria-hidden="true" class="lang-brand-icon" decoding="async">
             <span class="lang-text">KA</span>
             <span class="arrow">▾</span>
           </button>
           <ul class="lang-menu" id="langMenu" role="menu" aria-label="Language menu">
-            <li data-lang="ka" role="menuitem"><img src="images/georgia.webp" alt="" aria-hidden="true"> KA</li>
-            <li data-lang="en" role="menuitem"><img src="images/america.webp" alt="" aria-hidden="true"> EN</li>
+            <li data-lang="ka" role="menuitem"><img src="images/icon.webp" alt="" aria-hidden="true" class="lang-brand-icon" decoding="async"> KA</li>
+            <li data-lang="en" role="menuitem"><img src="images/icon.webp" alt="" aria-hidden="true" class="lang-brand-icon" decoding="async"> EN</li>
           </ul>
         </div>
         <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
@@ -134,6 +136,11 @@
 
 
   <footer class="footer">
+  <div class="footer-brand">
+    <a href="index.html" class="footer-logo" aria-label="Ninart Vision — მთავარი">
+      <img src="images/logo.webp" alt="" class="brand-logo brand-logo--footer" data-alt-key="logo.alt" width="160" height="44" decoding="async">
+    </a>
+  </div>
     <div class="container">
       <p data-key="footer.copyright">© 2026 Ninart Vision. ყველა უფლება დაცულია.</p>
     </div>

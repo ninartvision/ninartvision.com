@@ -38,28 +38,32 @@ body {
 .news-item {
   display: flex;
   align-items: center;
-
-  padding: 30px;
-  margin-bottom: 20px;
-
-  background: #1a1a1f;
-  border-radius: 20px;
-
+  padding: clamp(22px, 4vw, 30px);
+  margin-bottom: 16px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 18px;
   text-decoration: none;
-  transition: 0.3s ease;
+  transition:
+    background 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
 .news-item:hover {
-  transform: translateY(-4px);
-  background: #202026;
+  transform: none;
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(201, 169, 79, 0.22);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.32);
 }
 
 /* ===== Date ===== */
 
 .news-date {
   min-width: 110px;
-  font-size: 14px;
-  color: #9c9c9c;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.42);
+  letter-spacing: 0.06em;
 }
 
 /* ===== Content ===== */

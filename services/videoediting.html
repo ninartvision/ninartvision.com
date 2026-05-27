@@ -3,12 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="../images/favicon.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="../images/logo.webp" type="image/webp" sizes="any">
+  <link rel="apple-touch-icon" href="../images/favicon.png">
 
   <title>ვიდეო მონტაჟი — Ninart Vision</title>
   <link rel="canonical" href="https://ninartvision.com/services/videoediting.html">
 
   <link rel="stylesheet" href="../css/style.css">
-  <link rel="icon" type="image/png" href="../images/favicon.png">
   <link rel="stylesheet" href="../css/services.css">
 
   <meta name="description" content="პროფესიონალური ვიდეო მონტაჟი სოციალური მედიის, რეკლამისა და ბიზნეს პრეზენტაციებისთვის." />
@@ -22,7 +24,7 @@
 <header>
   <nav>
     <a href="../index.html" class="logo">
-      <img src="../images/logo.webp" alt="Ninart Vision logo">
+      <img src="../images/logo.webp" alt="" data-alt-key="logo.alt" class="brand-logo" width="132" height="36" decoding="async">
     </a>
 
         <ul id="navLinks" class="nav-links">
@@ -36,13 +38,13 @@
     <div class="nav-controls">
       <div class="lang-dropdown">
         <button class="lang-current" id="langToggle" aria-haspopup="true" aria-expanded="false" aria-controls="langMenu">
-          <img src="../images/georgia.webp" alt="" aria-hidden="true">
+          <img src="../images/icon.webp" alt="" aria-hidden="true" class="lang-brand-icon" decoding="async">
           <span class="lang-text">KA</span>
           <span class="arrow">&#9662;</span>
         </button>
         <ul class="lang-menu" id="langMenu" role="menu" aria-label="Language menu">
-          <li data-lang="ka" role="menuitem"><img src="../images/georgia.webp" alt="" aria-hidden="true"> KA</li>
-          <li data-lang="en" role="menuitem"><img src="../images/america.webp" alt="" aria-hidden="true"> EN</li>
+          <li data-lang="ka" role="menuitem"><img src="../images/icon.webp" alt="" aria-hidden="true" class="lang-brand-icon" decoding="async"> KA</li>
+          <li data-lang="en" role="menuitem"><img src="../images/icon.webp" alt="" aria-hidden="true" class="lang-brand-icon" decoding="async"> EN</li>
         </ul>
       </div>
       <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
@@ -187,8 +189,15 @@
 
 </main>
 
-<footer>
-  <p>© 2026 Ninart Vision. All rights reserved.</p>
+<footer class="footer">
+  <div class="footer-brand">
+    <a href="../index.html" class="footer-logo" aria-label="Ninart Vision — მთავარი">
+      <img src="../images/logo.webp" alt="" class="brand-logo brand-logo--footer" data-alt-key="logo.alt" width="160" height="44" decoding="async">
+    </a>
+  </div>
+  <div class="container">
+    <p>© 2026 Ninart Vision. All rights reserved.</p>
+  </div>
 </footer>
 
 <script src="../js/particles.min.js" defer></script>

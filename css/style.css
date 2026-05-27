@@ -1,4 +1,5 @@
 @import url('premium.css');
+@import url('brand.css');
 
 /* BPG font */
 @font-face {
@@ -194,9 +195,10 @@ header > nav {
 }
 
 .lang-current img {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  border-radius: 0;
 }
 
 .lang-text {
@@ -244,9 +246,10 @@ header > nav {
 }
 
 .lang-menu li img {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  border-radius: 0;
 }
 
 .lang-menu li:hover {
@@ -701,10 +704,6 @@ header > nav {
     display: flex;
   }
 
-  .logo img {
-    height: 32px;
-  }
-
   .nav-links {
     position: fixed;
     top: 64px;
@@ -759,13 +758,7 @@ footer {
   z-index: 9999;
 }
 
-/* ========== LOGO ========== */
-
-.logo img {
-  height: 40px;
-  width: auto;
-  display: block;
-}
+/* Logo sizing: css/brand.css (images/logo.webp) */
 
 /* ========== HERO BUTTONS ========== */
 
@@ -1198,9 +1191,8 @@ header > nav,
 /* Apply hover interactions only on devices that support hover (avoid touch zoom/jump) */
 @media (hover: hover) and (pointer: fine) {
   .hero-link:hover {
-    transform: scale(1.05);
- /* subtle, elegant emphasis */
-    box-shadow: 0 16px 42px rgba(228, 204, 137, 0.14), 0 8px 22px rgba(0,0,0,0.38); /* ~15-20% stronger glow */
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(201, 169, 79, 0.1), 0 4px 16px rgba(0, 0, 0, 0.32);
   }
 
   .hero-link:active {
@@ -1459,10 +1451,10 @@ header > nav,
 }
 
 .service-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-4px);
   cursor: pointer;
-  border-color: #e0c16c;
-  box-shadow: 0 10px 30px rgba(0, 198, 255, 0.2);
+  border-color: rgba(201, 169, 79, 0.35);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 0 0 24px rgba(201, 169, 79, 0.08);
 }
 
 .service-icon {
@@ -1593,7 +1585,7 @@ header > nav,
     /* გვერდებიდან fade */
     linear-gradient(to left, #000 0%, transparent 30%, transparent 70%, #000 100%),
 
-    url("../images/earth.png") center bottom no-repeat;
+    url("../images/earth.webp") center bottom no-repeat;
 
   background-size: cover;
   pointer-events: none;
@@ -2150,20 +2142,17 @@ header > nav,
 }
 
 .project-card:hover {
-  transform: translateY(-8px) scale(1.015);
+  transform: translateY(-4px);
   box-shadow:
-    0 2px 8px rgba(0, 0, 0, 0.28),
-    0 24px 56px rgba(0, 0, 0, 0.55),
-    0 10px 28px rgba(201, 169, 79, 0.12),
-    0 0 80px rgba(201, 169, 79, 0.15),
-    0 0 0 1px rgba(201, 169, 79, 0.24),
-    inset 0 1px 0 rgba(255, 255, 255, 0.18),
-    inset 0 -1px 0 rgba(0, 0, 0, 0.2);
-  border-color: rgba(201, 169, 79, 0.42);
+    0 4px 12px rgba(0, 0, 0, 0.3),
+    0 20px 44px rgba(0, 0, 0, 0.48),
+    0 0 32px rgba(201, 169, 79, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  border-color: rgba(201, 169, 79, 0.32);
 }
 
 .project-card:hover::before {
-  opacity: 1.6;
+  opacity: 1.15;
 }
 
 .project-card:hover::after {
