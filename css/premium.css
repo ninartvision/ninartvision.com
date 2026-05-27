@@ -77,20 +77,7 @@ body::before {
 }
 
 /* ——— Header ——— */
-header {
-  background: rgba(0, 0, 0, 0.35);
-  border-bottom-color: transparent;
-  transition:
-    background 0.45s var(--ease-smooth),
-    border-color 0.45s var(--ease-smooth),
-    box-shadow 0.45s var(--ease-smooth);
-}
-
-header.is-scrolled {
-  background: rgba(0, 0, 0, 0.82);
-  border-bottom-color: var(--border-subtle);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
-}
+/* Navbar bar glass → css/style.css (header only) */
 
 .nav-links {
   list-style: none;
@@ -1015,14 +1002,7 @@ h1, h2, h3, h4 {
 }
 
 /* ——— Header & navigation ——— */
-header {
-  background: rgba(0, 0, 0, 0.28);
-}
-
-header.is-scrolled {
-  background: rgba(6, 6, 8, 0.88);
-  box-shadow: 0 1px 0 var(--border-subtle), 0 12px 40px rgba(0, 0, 0, 0.35);
-}
+/* Navbar bar glass → css/style.css (header only) */
 
 header > nav {
   gap: 0.75rem;

@@ -13,19 +13,7 @@
   --nav-glass-glow: rgba(70, 140, 200, 0.08);
 }
 
-/* Viewport top — cosmic atmosphere (overscroll / browser chrome blend) */
-html {
-  background-color: #02040c;
-  background-image: radial-gradient(
-    ellipse 130% 70% at 50% -25%,
-    rgba(22, 48, 92, 0.28) 0%,
-    rgba(10, 22, 46, 0.1) 45%,
-    transparent 72%
-  );
-  background-attachment: fixed;
-}
-
-/* ——— Top bar: translucent deep-space glass ——— */
+/* ——— Top bar only (not site/html background) ——— */
 header {
   position: fixed;
   top: 0;
