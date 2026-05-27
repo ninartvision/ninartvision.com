@@ -516,11 +516,6 @@ body.menu-open {
   text-align: center;
 }
 
-/* ——— Particles (subtler) ——— */
-#particles-js canvas {
-  opacity: 0.65 !important;
-}
-
 /* ——— Focus & reduced motion ——— */
 a:focus-visible,
 button:focus-visible {
@@ -1454,11 +1449,6 @@ body.is-ready #hero .hero-inner {
 .wa-popup {
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-lg);
-}
-
-/* ——— Particles ——— */
-#particles-js canvas {
-  opacity: 0.5 !important;
 }
 
 /* ——— Selection & tap ——— */

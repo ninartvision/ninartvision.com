@@ -480,29 +480,31 @@ const particlesContainer = document.getElementById("particles-js");
 if (particlesContainer && typeof particlesJS !== "undefined") {
   particlesJS("particles-js", {
     particles: {
-      number: { value: 42, density: { enable: true, value_area: 1400 } },
-      color: { value: "#d6c28a" },
+      number: { value: 65, density: { enable: true, value_area: 1200 } },
+      color: { value: "#ffffff" },
       shape: { type: "circle" },
-      opacity: { value: 0.35, random: true },
-      size: { value: 2, random: true },
+      opacity: { value: 0.9, random: true },
+      size: { value: 3, random: true },
       line_linked: {
         enable: true,
-        distance: 200,
-        color: "#C9A94F",
-        opacity: 0.12,
+        distance: 250,
+        color: "#ffffff",
+        opacity: 0.3,
         width: 1
       },
-      move: { enable: true, speed: 1.2, random: true, out_mode: "out" }
+      move: { enable: true, speed: 5, random: true, out_mode: "out" }
     },
     interactivity: {
       detect_on: "window",
       events: {
-        onhover: { enable: true, mode: "grab" },
-        onclick: { enable: false },
+        onhover: { enable: true, mode: ["grab", "repulse"] },
+        onclick: { enable: true, mode: "push" },
         resize: true
       },
       modes: {
-        grab: { distance: 140, line_linked: { opacity: 0.25 } }
+        grab: { distance: 180, line_linked: { opacity: 0.6 } },
+        repulse: { distance: 160 },
+        push: { particles_nb: 4 }
       }
     },
     retina_detect: true
