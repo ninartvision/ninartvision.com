@@ -236,7 +236,7 @@ body.menu-open {
   font-weight: 600;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--cosmic-soft, #8ec4e0);
   margin-bottom: 20px;
   opacity: 0.9;
 }
@@ -274,10 +274,7 @@ body.menu-open {
   letter-spacing: 0.04em;
 }
 
-.hero-title .line-4::after {
-  background: linear-gradient(90deg, var(--gold) 0%, rgba(201, 169, 79, 0.2) 100%) !important;
-  box-shadow: 0 0 12px var(--gold-glow) !important;
-}
+/* hero line-4 underline → cosmic-accent.css */
 
 .hero-title .purple,
 .hero-title .cyan {
@@ -338,18 +335,7 @@ body.menu-open {
 }
 
 /* Section headings */
-.web-projects-label,
-.web-projects-label-line {
-  color: var(--gold) !important;
-}
-
-.web-projects-label-line {
-  background: var(--gold) !important;
-}
-
-.web-projects-divider {
-  background: linear-gradient(to right, var(--gold), transparent) !important;
-}
+/* web-projects label/divider → cosmic-accent.css */
 
 .web-projects-heading,
 #services > .container > h2,
@@ -445,9 +431,7 @@ body.menu-open {
   transform: translateX(4px);
 }
 
-.news-icon {
-  color: var(--gold) !important;
-}
+/* news-icon → cosmic-accent.css */
 
 /* ——— Calculator ——— */
 .calc-title {
@@ -493,11 +477,7 @@ body.menu-open {
 }
 
 /* ——— About ——— */
-#about h1::after,
-.about-list li::before {
-  background: var(--gold) !important;
-  box-shadow: 0 0 8px var(--gold-glow) !important;
-}
+/* about micro-lines → cosmic-accent.css */
 
 /* ——— Footer ——— */
 .footer {
@@ -606,7 +586,7 @@ body {
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--cosmic-soft, #8ec4e0);
   margin: 0 0 12px;
 }
 
@@ -614,7 +594,7 @@ body {
 .web-projects-label-line {
   width: 24px;
   height: 1px;
-  background: var(--gold);
+  background: var(--cosmic, #7ab4d4);
   flex-shrink: 0;
 }
 
@@ -645,7 +625,7 @@ body {
   height: 1px;
   width: 0;
   max-width: 120px;
-  background: linear-gradient(90deg, var(--gold), transparent);
+  background: linear-gradient(90deg, var(--cosmic, #7ab4d4), transparent);
   transition: width 0.7s var(--ease-out);
 }
 
@@ -668,7 +648,7 @@ body {
   font-size: 0.9rem;
   font-weight: 500;
   letter-spacing: 0.04em;
-  color: var(--gold-light);
+  color: var(--cosmic-light, #a8d4ea);
   text-decoration: none;
   padding: 8px 0;
   border-bottom: 1px solid transparent;
@@ -686,7 +666,7 @@ body {
 
 .link-arrow:hover {
   color: #fff;
-  border-color: var(--border-gold);
+  border-color: var(--border-cosmic, rgba(110, 180, 220, 0.26));
   gap: 12px;
 }
 
@@ -784,10 +764,7 @@ body {
   color: var(--gold) !important;
 }
 
-.wp-label-line,
-.coming-title::after {
-  background: var(--gold) !important;
-}
+/* wp-label-line, coming-title → cosmic-accent.css */
 
 .wp-card,
 .wp-card:hover {
@@ -1023,7 +1000,7 @@ h1, h2, h3, h4 {
     90deg,
     transparent 0%,
     rgba(255, 255, 255, 0.06) 20%,
-    rgba(201, 169, 79, 0.12) 50%,
+    rgba(120, 190, 225, 0.14) 50%,
     rgba(255, 255, 255, 0.06) 80%,
     transparent 100%
   );

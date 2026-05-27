@@ -1,0 +1,117 @@
+/* ============================================================
+   Cosmic micro-accents — dividers, labels, tiny UI details
+   Primary luxury gold (CTAs, logo, buttons) unchanged
+   ============================================================ */
+
+:root {
+  --cosmic: #7ab4d4;
+  --cosmic-light: #a8d4ea;
+  --cosmic-soft: #8ec4e0;
+  --cosmic-muted: rgba(140, 195, 225, 0.75);
+  --cosmic-glow: rgba(110, 185, 220, 0.22);
+  --cosmic-glow-soft: rgba(100, 175, 215, 0.1);
+  --cosmic-line: rgba(125, 190, 225, 0.45);
+  --cosmic-line-fade: rgba(100, 170, 210, 0.12);
+  --border-cosmic: rgba(110, 180, 220, 0.26);
+  --shadow-cosmic: 0 0 10px var(--cosmic-glow-soft);
+}
+
+/* ——— Section labels & divider lines ——— */
+.section-label,
+.web-projects-label,
+.wp-label {
+  color: var(--cosmic-soft) !important;
+  text-shadow: 0 0 20px var(--cosmic-glow-soft);
+}
+
+.section-label-line,
+.web-projects-label-line,
+.wp-label-line {
+  background: linear-gradient(90deg, var(--cosmic-light), var(--cosmic)) !important;
+  box-shadow: 0 0 8px var(--cosmic-glow-soft);
+}
+
+.section-rule,
+.web-projects-divider {
+  background: linear-gradient(90deg, var(--cosmic), var(--cosmic-line-fade), transparent) !important;
+  box-shadow: 0 0 6px var(--cosmic-glow-soft);
+}
+
+/* Section whisper separators */
+#web-projects::before,
+#services::before,
+.home-news::before {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.05) 20%,
+    var(--cosmic-line-fade) 50%,
+    rgba(255, 255, 255, 0.05) 80%,
+    transparent 100%
+  ) !important;
+}
+
+/* ——— Hero micro-details ——— */
+.hero-eyebrow {
+  color: var(--cosmic-soft);
+  text-shadow: 0 0 18px var(--cosmic-glow-soft);
+}
+
+.hero-title .line-4::after {
+  background: linear-gradient(90deg, var(--cosmic) 0%, var(--cosmic-line-fade) 100%) !important;
+  box-shadow: 0 0 10px var(--cosmic-glow-soft) !important;
+}
+
+/* ——— Section CTA micro-link ——— */
+.link-arrow {
+  color: var(--cosmic-light);
+}
+
+.link-arrow:hover {
+  border-color: var(--border-cosmic);
+  text-shadow: 0 0 12px var(--cosmic-glow-soft);
+}
+
+/* ——— News accordion chevron & icon ——— */
+.icon-chevron {
+  color: var(--cosmic-soft) !important;
+  filter: drop-shadow(0 0 4px var(--cosmic-glow-soft));
+}
+
+.news-icon {
+  color: var(--cosmic-soft) !important;
+  filter: drop-shadow(0 0 5px var(--cosmic-glow-soft));
+}
+
+/* ——— About page micro-accents ——— */
+#about h1::after,
+.about-list li::before {
+  background: linear-gradient(90deg, var(--cosmic-light), var(--cosmic)) !important;
+  box-shadow: 0 0 8px var(--cosmic-glow-soft) !important;
+}
+
+/* ——— Portfolio / coming soon ——— */
+.coming-title::after {
+  background: linear-gradient(90deg, var(--cosmic-light), var(--cosmic)) !important;
+  box-shadow: 0 0 8px var(--cosmic-glow-soft) !important;
+}
+
+.project-card::before {
+  background: linear-gradient(to right, transparent, var(--cosmic-line), transparent) !important;
+}
+
+/* ——— Breadcrumb label accent ——— */
+.wp-breadcrumb a:hover {
+  color: var(--cosmic-light) !important;
+}
+
+/* style.css legacy divider hook */
+.web-projects-divider {
+  background: linear-gradient(to right, var(--cosmic), transparent) !important;
+}
+
+/* Blog section micro-line */
+.blog-section h2::after {
+  background: linear-gradient(90deg, var(--cosmic), var(--cosmic-line-fade), transparent) !important;
+  box-shadow: 0 0 6px var(--cosmic-glow-soft);
+}
